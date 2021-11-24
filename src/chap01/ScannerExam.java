@@ -1,6 +1,6 @@
 package chap01;
 
-public class Scanner {
+public class ScannerExam {
 
 	// nextBoolean() - boolean
 	// nextByte() - byte
