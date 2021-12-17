@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="import test in IntelliJ">
-      <change afterPath="$PROJECT_DIR$/src/chap01/Min3.java" afterDir="false" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="Find min in three number">
+      <change afterPath="$PROJECT_DIR$/src/chap01/FindDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -37,7 +39,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.FindDate.js">
     <configuration name="Min3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chap01.Min3" />
       <module name="Algorithm" />
@@ -51,8 +53,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FindDate.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/chap01/FindDate.js" working-dir="$PROJECT_DIR$/src/chap01">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.FindDate.js" />
         <item itemvalue="Application.Min3" />
       </list>
     </recent_temporary>
@@ -66,7 +72,8 @@
       <option name="presentableId" value="Default" />
       <updated>1638716220814</updated>
       <workItem from="1638716222727" duration="824000" />
-      <workItem from="1639660739945" duration="858000" />
+      <workItem from="1639660739945" duration="1327000" />
+      <workItem from="1639739808758" duration="894000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -75,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638716398464</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Find min in three number">
+      <created>1639661767807</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639661767807</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +108,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="import test in IntelliJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="import test in IntelliJ" />
+    <MESSAGE value="Find min in three number" />
+    <option name="LAST_COMMIT_MESSAGE" value="Find min in three number" />
   </component>
 </project>
