@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="Loop&#10;- sum with while">
-      <change afterPath="$PROJECT_DIR$/src/chap01/SumWhilePlus1.java" afterDir="false" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="Loop&#10;- while문이 종료될 때 변수 i 값이 n+1이 됨을 확인">
+      <change afterPath="$PROJECT_DIR$/src/chap01/SumFor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,9 +48,9 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
-  <component name="RunManager" selected="Application.SumWhilePlus1">
-    <configuration name="Min3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap01.Min3" />
+  <component name="RunManager" selected="Application.SumFor">
+    <configuration name="Min4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chap01.Min4" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -62,8 +62,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Min4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap01.Min4" />
+    <configuration name="SumFor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chap01.SumFor" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -106,11 +106,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SumFor" />
         <item itemvalue="Application.SumWhilePlus1" />
         <item itemvalue="Application.SumWhile" />
         <item itemvalue="Application.Min4" />
         <item itemvalue="Node.js.FindDate.js" />
-        <item itemvalue="Application.Min3" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +128,8 @@
       <workItem from="1639812565281" duration="1211000" />
       <workItem from="1639920162002" duration="1143000" />
       <workItem from="1640005559224" duration="1189000" />
-      <workItem from="1640094825948" duration="1241000" />
+      <workItem from="1640094825948" duration="1479000" />
+      <workItem from="1640177235589" duration="658000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -158,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640006155087</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Loop&#10;- while문이 종료될 때 변수 i 값이 n+1이 됨을 확인">
+      <created>1640096190718</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640096190718</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +188,7 @@
     <MESSAGE value="Find min in three number" />
     <MESSAGE value="Find min in four number" />
     <MESSAGE value="Loop&#10;- sum with while" />
-    <option name="LAST_COMMIT_MESSAGE" value="Loop&#10;- sum with while" />
+    <MESSAGE value="Loop&#10;- while문이 종료될 때 변수 i 값이 n+1이 됨을 확인" />
+    <option name="LAST_COMMIT_MESSAGE" value="Loop&#10;- while문이 종료될 때 변수 i 값이 n+1이 됨을 확인" />
   </component>
 </project>
