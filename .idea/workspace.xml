@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="Loop&#10;- For문을 이용한 1부터 n까지의 합">
-      <change afterPath="$PROJECT_DIR$/src/chap01/SumFor1.java" afterDir="false" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="Loop&#10;- 가우스의 덧셈을 이용하여 1부터 n까지의 정수 합을 구함">
+      <change afterPath="$PROJECT_DIR$/src/chap01/GaussSum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chap01/SumFor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap01/SumFor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +48,9 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
-  <component name="RunManager" selected="Application.SumFor1">
-    <configuration name="Min4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap01.Min4" />
+  <component name="RunManager" selected="Application.GaussSum">
+    <configuration name="GaussSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chap01.GaussSum" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -89,8 +88,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumWhile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap01.SumWhile" />
+    <configuration name="SumGauss_01_08" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chap01.GaussSum" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -117,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GaussSum" />
+        <item itemvalue="Application.SumGauss_01_08" />
         <item itemvalue="Application.SumFor1" />
         <item itemvalue="Application.SumFor" />
         <item itemvalue="Application.SumWhilePlus1" />
-        <item itemvalue="Application.SumWhile" />
-        <item itemvalue="Application.Min4" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +140,8 @@
       <workItem from="1640005559224" duration="1189000" />
       <workItem from="1640094825948" duration="1479000" />
       <workItem from="1640177235589" duration="749000" />
-      <workItem from="1640327639141" duration="2465000" />
+      <workItem from="1640327639141" duration="3136000" />
+      <workItem from="1640414864034" duration="3375000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -185,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640177964919</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Loop&#10;- For문을 이용한 1부터 n까지의 합&#10;- ex) n이 3이면 1 + 2 + 3 = 6으로 출력되도록 작성">
+      <created>1640347210182</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1640347210182</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +216,8 @@
     <MESSAGE value="Loop&#10;- sum with while" />
     <MESSAGE value="Loop&#10;- while문이 종료될 때 변수 i 값이 n+1이 됨을 확인" />
     <MESSAGE value="Loop&#10;- For문을 이용한 1부터 n까지의 합" />
-    <option name="LAST_COMMIT_MESSAGE" value="Loop&#10;- For문을 이용한 1부터 n까지의 합" />
+    <MESSAGE value="Loop&#10;- For문을 이용한 1부터 n까지의 합&#10;- ex) n이 3이면 1 + 2 + 3 = 6으로 출력되도록 작성" />
+    <MESSAGE value="Loop&#10;- 가우스의 덧셈을 이용하여 1부터 n까지의 정수 합을 구함" />
+    <option name="LAST_COMMIT_MESSAGE" value="Loop&#10;- 가우스의 덧셈을 이용하여 1부터 n까지의 정수 합을 구함" />
   </component>
 </project>
