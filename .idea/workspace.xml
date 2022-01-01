@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="Loop&#10;- 이중 for문으로 9*9테이블 생성">
-      <change afterPath="$PROJECT_DIR$/src/chap01/TriangleLB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap02/CloneArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,13 +48,13 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
-  <component name="RunManager" selected="Application.TriangleLB">
-    <configuration name="BetweenSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap01.BetweenSum" />
+  <component name="RunManager" selected="Application.CloneArray">
+    <configuration name="CloneArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chap02.CloneArray" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chap01.*" />
+          <option name="PATTERN" value="chap02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CloneArray" />
         <item itemvalue="Application.TriangleLB" />
         <item itemvalue="Application.Multi99Table" />
         <item itemvalue="Application.Digits" />
         <item itemvalue="Application.SumForPos" />
-        <item itemvalue="Application.BetweenSum" />
       </list>
     </recent_temporary>
   </component>
@@ -146,6 +146,7 @@
       <workItem from="1640787314740" duration="577000" />
       <workItem from="1640792152441" duration="853000" />
       <workItem from="1640940418270" duration="1109000" />
+      <workItem from="1641033106399" duration="256000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
