@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="Loop&#10;- 이중 for문으로 9*9테이블 생성">
-      <change afterPath="$PROJECT_DIR$/src/chap02/CloneArray.java" afterDir="false" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="Array&#10;- Clone">
+      <change afterPath="$PROJECT_DIR$/src/chap02/MaxOfArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,13 +42,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaScript" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
-  <component name="RunManager" selected="Application.CloneArray">
+  <component name="RunManager" selected="Application.MaxOfArray">
     <configuration name="CloneArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chap02.CloneArray" />
       <module name="Algorithm" />
@@ -75,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Multi99Table" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap01.Multi99Table" />
+    <configuration name="MaxOfArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chap02.MaxOfArray" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chap01.*" />
+          <option name="PATTERN" value="chap02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,8 +88,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumForPos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap01.SumForPos" />
+    <configuration name="Multi99Table" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chap01.Multi99Table" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -116,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MaxOfArray" />
         <item itemvalue="Application.CloneArray" />
         <item itemvalue="Application.TriangleLB" />
         <item itemvalue="Application.Multi99Table" />
         <item itemvalue="Application.Digits" />
-        <item itemvalue="Application.SumForPos" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +146,8 @@
       <workItem from="1640787314740" duration="577000" />
       <workItem from="1640792152441" duration="853000" />
       <workItem from="1640940418270" duration="1109000" />
-      <workItem from="1641033106399" duration="256000" />
+      <workItem from="1641033106399" duration="319000" />
+      <workItem from="1641123446056" duration="1580000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -232,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640793458421</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Array&#10;- Clone">
+      <created>1641033399581</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1641033399582</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +270,7 @@
     <MESSAGE value="Loop&#10;- do문 while(제어식);&#10;- 0이하의 값이 입력될 경우 계속해서 'n의 값:'이라고 출력 됨" />
     <MESSAGE value="Loop&#10;- do문 while(제어식);&#10;- 2자리의 양수 값만 출력" />
     <MESSAGE value="Loop&#10;- 이중 for문으로 9*9테이블 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="Loop&#10;- 이중 for문으로 9*9테이블 생성" />
+    <MESSAGE value="Array&#10;- Clone" />
+    <option name="LAST_COMMIT_MESSAGE" value="Array&#10;- Clone" />
   </component>
 </project>
