@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="Array&#10;- 배열 요소를 역순으로 정렬" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="Array&#10;- 배열 요소를 역순으로 정렬">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chap02/ReverseArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap02/ReverseArray.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,6 +151,8 @@
       <workItem from="1641213939392" duration="713000" />
       <workItem from="1641307071541" duration="306000" />
       <workItem from="1641381352940" duration="2134000" />
+      <workItem from="1641559258138" duration="598000" />
+      <workItem from="1641732559108" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
