@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="file test" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="file test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,20 +47,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.ReverseArray">
-    <configuration name="CloneArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap02.CloneArray" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chap02.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.PrimeNumber1">
     <configuration name="IntArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chap02.IntArray" />
       <module name="Algorithm" />
@@ -98,6 +87,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PrimeNumber1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chap02.PrimeNumber1" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chap02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReverseArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chap02.ReverseArray" />
       <module name="Algorithm" />
@@ -113,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PrimeNumber1" />
         <item itemvalue="Application.ReverseArray" />
         <item itemvalue="Application.IntArray" />
         <item itemvalue="Application.MaxOfArrayRand" />
         <item itemvalue="Application.MaxOfArray" />
-        <item itemvalue="Application.CloneArray" />
       </list>
     </recent_temporary>
   </component>
@@ -150,6 +152,8 @@
       <workItem from="1641381352940" duration="2134000" />
       <workItem from="1641559258138" duration="598000" />
       <workItem from="1641732559108" duration="641000" />
+      <workItem from="1641900747767" duration="668000" />
+      <workItem from="1641989819337" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
