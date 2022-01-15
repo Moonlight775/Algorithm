@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="1000 이하의 소수를 나열">
-      <change afterPath="$PROJECT_DIR$/src/grammer/BufferedReader1.java" afterDir="false" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="BufferedReader 기초">
+      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/LimitString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +48,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.BufferedReader1">
+  <component name="RunManager" selected="Application.LimitString">
     <configuration name="BufferedReader1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="grammer.BufferedReader1" />
       <module name="Algorithm" />
@@ -75,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaxOfArrayRand" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap02.MaxOfArrayRand" />
+    <configuration name="LimitString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="simpleQuiz.LimitString" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chap02.*" />
+          <option name="PATTERN" value="simpleQuiz.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LimitString" />
         <item itemvalue="Application.BufferedReader1" />
         <item itemvalue="Application.PrimeNumber1" />
         <item itemvalue="Application.ReverseArray" />
         <item itemvalue="Application.IntArray" />
-        <item itemvalue="Application.MaxOfArrayRand" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +155,8 @@
       <workItem from="1641732559108" duration="641000" />
       <workItem from="1641900747767" duration="668000" />
       <workItem from="1641989819337" duration="947000" />
-      <workItem from="1642077197374" duration="2154000" />
+      <workItem from="1642077197374" duration="2347000" />
+      <workItem from="1642247736021" duration="515000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -283,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641990170954</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="BufferedReader 기초">
+      <created>1642084559960</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1642084559960</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +327,7 @@
     <MESSAGE value="Array&#10;- 배열 요소를 역순으로 정렬" />
     <MESSAGE value="file test" />
     <MESSAGE value="1000 이하의 소수를 나열" />
-    <option name="LAST_COMMIT_MESSAGE" value="1000 이하의 소수를 나열" />
+    <MESSAGE value="BufferedReader 기초" />
+    <option name="LAST_COMMIT_MESSAGE" value="BufferedReader 기초" />
   </component>
 </project>
