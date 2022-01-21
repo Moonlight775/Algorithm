@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="버블 정렬">
-      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/FizzBuzz.js" afterDir="false" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="1~30 3의 배수이면 Fizz, 5의 배수이면 Buzz, 3과 5의 배수이면 FizzBuzz 출력">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +148,8 @@
       <workItem from="1642247736021" duration="573000" />
       <workItem from="1642424706334" duration="1499000" />
       <workItem from="1642512243958" duration="466000" />
-      <workItem from="1642591944978" duration="683000" />
+      <workItem from="1642591944978" duration="750000" />
+      <workItem from="1642680854418" duration="818000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -305,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642512667740</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="1~30 3의 배수이면 Fizz, 5의 배수이면 Buzz, 3과 5의 배수이면 FizzBuzz 출력">
+      <created>1642596063704</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1642596063704</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,6 +352,7 @@
     <MESSAGE value="문자열의 길이가 4 혹은 6이고, 숫자로만 구성되어있는지 확인" />
     <MESSAGE value="입력 받은 10진수를 2진수~36진수로 기수 변환" />
     <MESSAGE value="버블 정렬" />
-    <option name="LAST_COMMIT_MESSAGE" value="버블 정렬" />
+    <MESSAGE value="1~30 3의 배수이면 Fizz, 5의 배수이면 Buzz, 3과 5의 배수이면 FizzBuzz 출력" />
+    <option name="LAST_COMMIT_MESSAGE" value="1~30 3의 배수이면 Fizz, 5의 배수이면 Buzz, 3과 5의 배수이면 FizzBuzz 출력" />
   </component>
 </project>
