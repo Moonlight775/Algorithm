@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="1~30 3의 배수이면 Fizz, 5의 배수이면 Buzz, 3과 5의 배수이면 FizzBuzz 출력">
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="Create Quiz">
+      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/DevideNumber.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,26 +48,13 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Node.js.FizzBuzz.js">
+  <component name="RunManager" selected="Node.js.DevideNumber.js">
     <configuration name="Bubble" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chap02.Bubble" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="chap02.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BufferedReader1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="grammer.BufferedReader1" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="grammer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,16 +88,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DevideNumber.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/simpleQuiz/DevideNumber.js" working-dir="$PROJECT_DIR$/src/simpleQuiz">
+      <method v="2" />
+    </configuration>
     <configuration name="FizzBuzz.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/simpleQuiz/FizzBuzz.js" working-dir="$PROJECT_DIR$/src/simpleQuiz">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.DevideNumber.js" />
         <item itemvalue="Node.js.FizzBuzz.js" />
         <item itemvalue="Application.Bubble" />
         <item itemvalue="Application.CardConvRev" />
         <item itemvalue="Application.LimitString" />
-        <item itemvalue="Application.BufferedReader1" />
       </list>
     </recent_temporary>
   </component>
@@ -150,6 +141,8 @@
       <workItem from="1642512243958" duration="466000" />
       <workItem from="1642591944978" duration="750000" />
       <workItem from="1642680854418" duration="818000" />
+      <workItem from="1642769724598" duration="778000" />
+      <workItem from="1642832177505" duration="682000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -312,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642596063704</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Create Quiz">
+      <created>1642769905428</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1642769905428</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,6 +353,7 @@
     <MESSAGE value="입력 받은 10진수를 2진수~36진수로 기수 변환" />
     <MESSAGE value="버블 정렬" />
     <MESSAGE value="1~30 3의 배수이면 Fizz, 5의 배수이면 Buzz, 3과 5의 배수이면 FizzBuzz 출력" />
-    <option name="LAST_COMMIT_MESSAGE" value="1~30 3의 배수이면 Fizz, 5의 배수이면 Buzz, 3과 5의 배수이면 FizzBuzz 출력" />
+    <MESSAGE value="Create Quiz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Quiz" />
   </component>
 </project>
