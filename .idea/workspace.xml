@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="Create Quiz">
-      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/DevideNumber.js" afterDir="false" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="나누어 떨어지는 숫자 배열">
+      <change afterPath="$PROJECT_DIR$/src/chap02/PrimeNumber2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,7 +48,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Node.js.DevideNumber.js">
+  <component name="RunManager" selected="Application.PrimeNumber2">
     <configuration name="Bubble" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chap02.Bubble" />
       <module name="Algorithm" />
@@ -75,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LimitString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="simpleQuiz.LimitString" />
+    <configuration name="PrimeNumber2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chap02.PrimeNumber2" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="simpleQuiz.*" />
+          <option name="PATTERN" value="chap02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,11 +96,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PrimeNumber2" />
         <item itemvalue="Node.js.DevideNumber.js" />
         <item itemvalue="Node.js.FizzBuzz.js" />
         <item itemvalue="Application.Bubble" />
         <item itemvalue="Application.CardConvRev" />
-        <item itemvalue="Application.LimitString" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +142,9 @@
       <workItem from="1642591944978" duration="750000" />
       <workItem from="1642680854418" duration="818000" />
       <workItem from="1642769724598" duration="778000" />
-      <workItem from="1642832177505" duration="682000" />
+      <workItem from="1642832177505" duration="1370000" />
+      <workItem from="1643022901500" duration="627000" />
+      <workItem from="1643120041603" duration="620000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -312,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642769905428</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="나누어 떨어지는 숫자 배열">
+      <created>1642857677927</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1642857677927</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,6 +363,7 @@
     <MESSAGE value="버블 정렬" />
     <MESSAGE value="1~30 3의 배수이면 Fizz, 5의 배수이면 Buzz, 3과 5의 배수이면 FizzBuzz 출력" />
     <MESSAGE value="Create Quiz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Quiz" />
+    <MESSAGE value="나누어 떨어지는 숫자 배열" />
+    <option name="LAST_COMMIT_MESSAGE" value="나누어 떨어지는 숫자 배열" />
   </component>
 </project>
