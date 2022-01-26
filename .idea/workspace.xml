@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="나누어 떨어지는 숫자 배열">
-      <change afterPath="$PROJECT_DIR$/src/chap02/PrimeNumber2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="1000 이하의 소수를 모두 나열" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,7 +141,7 @@
       <workItem from="1642769724598" duration="778000" />
       <workItem from="1642832177505" duration="1370000" />
       <workItem from="1643022901500" duration="627000" />
-      <workItem from="1643120041603" duration="620000" />
+      <workItem from="1643120041603" duration="738000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -321,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642857677927</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="1000 이하의 소수를 모두 나열">
+      <created>1643120751861</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1643120751861</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +343,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="import test in IntelliJ" />
     <MESSAGE value="Find min in three number" />
     <MESSAGE value="Find min in four number" />
     <MESSAGE value="Loop&#10;- sum with while" />
@@ -364,6 +367,7 @@
     <MESSAGE value="1~30 3의 배수이면 Fizz, 5의 배수이면 Buzz, 3과 5의 배수이면 FizzBuzz 출력" />
     <MESSAGE value="Create Quiz" />
     <MESSAGE value="나누어 떨어지는 숫자 배열" />
-    <option name="LAST_COMMIT_MESSAGE" value="나누어 떨어지는 숫자 배열" />
+    <MESSAGE value="1000 이하의 소수를 모두 나열" />
+    <option name="LAST_COMMIT_MESSAGE" value="1000 이하의 소수를 모두 나열" />
   </component>
 </project>
