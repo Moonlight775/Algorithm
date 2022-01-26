@@ -9,7 +9,7 @@ public class SumAbsolutes {
 		int sum = 0;
 		
 		for (int i=0;i<absolutes.length;i++) {
-			sum +=absolutes[i];
+			sum +=Math.abs(absolutes[i]);
 		}
 		return sum;
 	}

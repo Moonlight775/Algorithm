@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="1000 이하의 소수를 모두 나열" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="1000 이하의 소수를 모두 나열">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simpleQuiz/SumAbsolutes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simpleQuiz/SumAbsolutes.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,22 +48,9 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.PrimeNumber2">
+  <component name="RunManager" selected="Application.SumAbsolutes">
     <configuration name="Bubble" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chap02.Bubble" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chap02.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardConvRev" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap02.CardConvRev" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -85,6 +75,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SumAbsolutes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="simpleQuiz.SumAbsolutes" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="simpleQuiz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DevideNumber.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/simpleQuiz/DevideNumber.js" working-dir="$PROJECT_DIR$/src/simpleQuiz">
       <method v="2" />
     </configuration>
@@ -93,11 +96,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SumAbsolutes" />
         <item itemvalue="Application.PrimeNumber2" />
         <item itemvalue="Node.js.DevideNumber.js" />
         <item itemvalue="Node.js.FizzBuzz.js" />
         <item itemvalue="Application.Bubble" />
-        <item itemvalue="Application.CardConvRev" />
       </list>
     </recent_temporary>
   </component>
@@ -142,6 +145,7 @@
       <workItem from="1642832177505" duration="1370000" />
       <workItem from="1643022901500" duration="627000" />
       <workItem from="1643120041603" duration="738000" />
+      <workItem from="1643209372470" duration="146000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
