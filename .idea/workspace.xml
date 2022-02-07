@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="선형 검색을 구현&#10;- 특정 값이 몇 번째 인덱스인지 검색">
-      <change afterPath="$PROJECT_DIR$/src/chap03/SeqSearchFor.java" afterDir="false" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="선형 검색을 구현&#10;- while문 대신 for문을 사용하여 간단하게 특정 값이 몇 번째 인덱스인지 검색">
+      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/DiffSequence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,13 +48,13 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.SeqSearchFor">
-    <configuration name="ArraySumForIn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap02.ArraySumForIn" />
+  <component name="RunManager" selected="Application.DiffSequence">
+    <configuration name="DiffSequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="simpleQuiz.DiffSequence" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chap02.*" />
+          <option name="PATTERN" value="simpleQuiz.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DiffSequence" />
         <item itemvalue="Application.SeqSearchFor" />
         <item itemvalue="Application.SeqSearch" />
         <item itemvalue="Application.RandomLotto" />
         <item itemvalue="Application.Return" />
-        <item itemvalue="Application.ArraySumForIn" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +170,8 @@
       <workItem from="1643809268814" duration="167000" />
       <workItem from="1643981557726" duration="857000" />
       <workItem from="1643982498683" duration="266000" />
-      <workItem from="1644063903666" duration="1427000" />
+      <workItem from="1644063903666" duration="1500000" />
+      <workItem from="1644240571060" duration="620000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -389,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644064448155</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="선형 검색을 구현&#10;- while문 대신 for문을 사용하여 간단하게 특정 값이 몇 번째 인덱스인지 검색">
+      <created>1644146011290</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1644146011290</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +415,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Loop&#10;- For문을 이용한 1부터 n까지의 합&#10;- ex) n이 3이면 1 + 2 + 3 = 6으로 출력되도록 작성" />
     <MESSAGE value="Loop&#10;- 가우스의 덧셈을 이용하여 1부터 n까지의 정수 합을 구함" />
     <MESSAGE value="Loop&#10;- 정수 a,b를 포함하여 그 사이의 모든 정수의 합을 구하여 반환" />
     <MESSAGE value="Loop&#10;- do문 while(제어식);&#10;- 0이하의 값이 입력될 경우 계속해서 'n의 값:'이라고 출력 됨" />
@@ -432,6 +439,7 @@
     <MESSAGE value="simple grammer&#10;- return 활용" />
     <MESSAGE value="무작위 번호 6개 뽑기" />
     <MESSAGE value="선형 검색을 구현&#10;- 특정 값이 몇 번째 인덱스인지 검색" />
-    <option name="LAST_COMMIT_MESSAGE" value="선형 검색을 구현&#10;- 특정 값이 몇 번째 인덱스인지 검색" />
+    <MESSAGE value="선형 검색을 구현&#10;- while문 대신 for문을 사용하여 간단하게 특정 값이 몇 번째 인덱스인지 검색" />
+    <option name="LAST_COMMIT_MESSAGE" value="선형 검색을 구현&#10;- while문 대신 for문을 사용하여 간단하게 특정 값이 몇 번째 인덱스인지 검색" />
   </component>
 </project>
