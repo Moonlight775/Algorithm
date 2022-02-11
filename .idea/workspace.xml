@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="1~10000 사이의 수에 8이 몇 번 나타나는가?">
-      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/CompareNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/Number1712.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/PrintScore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/Number11720.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +48,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.Number1712">
+  <component name="RunManager" selected="Application.Number11720">
     <configuration name="CompareNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="simpleQuiz.CompareNumber" />
       <module name="Algorithm" />
@@ -77,8 +75,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiffSequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="simpleQuiz.DiffSequence" />
+    <configuration name="Number11720" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="simpleQuiz.Number11720" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -118,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Number11720" />
         <item itemvalue="Application.Number1712" />
         <item itemvalue="Application.PrintScore" />
         <item itemvalue="Application.CompareNumber" />
         <item itemvalue="Application.CountEight" />
-        <item itemvalue="Application.DiffSequence" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +174,8 @@
       <workItem from="1644240571060" duration="707000" />
       <workItem from="1644330449012" duration="97000" />
       <workItem from="1644416394947" duration="718000" />
-      <workItem from="1644468950981" duration="8468000" />
+      <workItem from="1644468950981" duration="8941000" />
+      <workItem from="1644569671338" duration="3871000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
