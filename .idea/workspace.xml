@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="backjoon 11720&#10;- N개의 숫자가 공백 없이 쓰여있다. 이 숫자를 모두 합해서 출력하는 프로그램을 작성">
-      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/Number10809.java" afterDir="false" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="backjoon 10809&#10;- indexOf()&#10;- 알파벳 소문자로만 이루어진 단어 S가 주어진다. 각각의 알파벳에 대해서, 단어에 포함되어 있는 경우에는 처음 등장하는 위치를, 포함되어 있지 않은 경우에는 -1을 출력하는 프로그램을 작성">
+      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/Number10818.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,9 +48,9 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.Number10809">
-    <configuration name="CompareNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="simpleQuiz.CompareNumber" />
+  <component name="RunManager" selected="Application.Number10818">
+    <configuration name="Number10809" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="simpleQuiz.Number10809" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -62,8 +62,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Number10809" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="simpleQuiz.Number10809" />
+    <configuration name="Number10818" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="simpleQuiz.Number10818" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -116,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Number10818" />
         <item itemvalue="Application.Number10809" />
         <item itemvalue="Application.Number11720" />
         <item itemvalue="Application.Number1712" />
         <item itemvalue="Application.PrintScore" />
-        <item itemvalue="Application.CompareNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +177,8 @@
       <workItem from="1644468950981" duration="8941000" />
       <workItem from="1644569671338" duration="6722000" />
       <workItem from="1644639097198" duration="1953000" />
-      <workItem from="1644664988003" duration="3262000" />
+      <workItem from="1644664988003" duration="3957000" />
+      <workItem from="1644757625183" duration="2961000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -424,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644580618503</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="backjoon 10809&#10;- indexOf()&#10;- 알파벳 소문자로만 이루어진 단어 S가 주어진다. 각각의 알파벳에 대해서, 단어에 포함되어 있는 경우에는 처음 등장하는 위치를, 포함되어 있지 않은 경우에는 -1을 출력하는 프로그램을 작성">
+      <created>1644675921960</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1644675921960</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +450,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Loop&#10;- do문 while(제어식);&#10;- 2자리의 양수 값만 출력" />
     <MESSAGE value="Loop&#10;- 이중 for문으로 9*9테이블 생성" />
     <MESSAGE value="Array&#10;- Clone" />
     <MESSAGE value="Array&#10;- 배열 요소의 최댓값 구하기" />
@@ -467,6 +474,7 @@
     <MESSAGE value="수열 1+2+4+7+11+16+...&#10;20번 반복 시 결과 값은?" />
     <MESSAGE value="1~10000 사이의 수에 8이 몇 번 나타나는가?" />
     <MESSAGE value="backjoon 11720&#10;- N개의 숫자가 공백 없이 쓰여있다. 이 숫자를 모두 합해서 출력하는 프로그램을 작성" />
-    <option name="LAST_COMMIT_MESSAGE" value="backjoon 11720&#10;- N개의 숫자가 공백 없이 쓰여있다. 이 숫자를 모두 합해서 출력하는 프로그램을 작성" />
+    <MESSAGE value="backjoon 10809&#10;- indexOf()&#10;- 알파벳 소문자로만 이루어진 단어 S가 주어진다. 각각의 알파벳에 대해서, 단어에 포함되어 있는 경우에는 처음 등장하는 위치를, 포함되어 있지 않은 경우에는 -1을 출력하는 프로그램을 작성" />
+    <option name="LAST_COMMIT_MESSAGE" value="backjoon 10809&#10;- indexOf()&#10;- 알파벳 소문자로만 이루어진 단어 S가 주어진다. 각각의 알파벳에 대해서, 단어에 포함되어 있는 경우에는 처음 등장하는 위치를, 포함되어 있지 않은 경우에는 -1을 출력하는 프로그램을 작성" />
   </component>
 </project>
