@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="backjoon 2753&#10;-">
-      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/Number10950.java" afterDir="false" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="backjoon 10950&#10;- StringTokenizer를 사용하여 공백을 기준으로 문자열을 분리해주고, StringBuilder를 사용하여 A+B 값을 모두 저장한다.">
+      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/Number2739.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +48,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.Number10950">
+  <component name="RunManager" selected="Application.Number2739">
     <configuration name="Number10809" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="simpleQuiz.Number10809" />
       <module name="Algorithm" />
@@ -88,19 +88,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Number11720" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="simpleQuiz.Number11720" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="simpleQuiz.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Number2675" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="simpleQuiz.Number2675" />
       <module name="Algorithm" />
@@ -114,13 +101,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Number2739" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="simpleQuiz.Number2739" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="simpleQuiz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Number2739" />
         <item itemvalue="Application.Number10950" />
         <item itemvalue="Application.Number2675" />
         <item itemvalue="Application.Number10818" />
         <item itemvalue="Application.Number10809" />
-        <item itemvalue="Application.Number11720" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +182,8 @@
       <workItem from="1644843380453" duration="2562000" />
       <workItem from="1644936720917" duration="291000" />
       <workItem from="1645018310150" duration="441000" />
-      <workItem from="1645018788539" duration="2082000" />
+      <workItem from="1645018788539" duration="2250000" />
+      <workItem from="1645092486908" duration="869000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -457,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644937003130</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="backjoon 10950&#10;- StringTokenizer를 사용하여 공백을 기준으로 문자열을 분리해주고, StringBuilder를 사용하여 A+B 값을 모두 저장한다.">
+      <created>1645021046815</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1645021046815</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Array&#10;- 배열의 요소를 난수로 받아 최댓값 구하기" />
     <MESSAGE value="Array&#10;- 배열 요소를 역순으로 정렬" />
     <MESSAGE value="file test" />
     <MESSAGE value="1000 이하의 소수를 나열" />
@@ -500,6 +507,7 @@
     <MESSAGE value="backjoon 10818&#10;- N개의 정수가 주어진다. 이때, 최솟값과 최댓값을 구하는 프로그램을 작성" />
     <MESSAGE value="backjoon 2675&#10;- 문자열 반복&#10;- 삼중 for문을 사용하여 해결하였다. split을 사용하여 공백을 분리하여 한 줄에 입력되는 데이터를 반복횟수와 문자열을 구분하였다. char배열을 생성하지 않고 단순하게 String을 charAt으로 잘라내어 필요한 답을 출력하였다." />
     <MESSAGE value="backjoon 2753&#10;-" />
-    <option name="LAST_COMMIT_MESSAGE" value="backjoon 2753&#10;-" />
+    <MESSAGE value="backjoon 10950&#10;- StringTokenizer를 사용하여 공백을 기준으로 문자열을 분리해주고, StringBuilder를 사용하여 A+B 값을 모두 저장한다." />
+    <option name="LAST_COMMIT_MESSAGE" value="backjoon 10950&#10;- StringTokenizer를 사용하여 공백을 기준으로 문자열을 분리해주고, StringBuilder를 사용하여 A+B 값을 모두 저장한다." />
   </component>
 </project>
