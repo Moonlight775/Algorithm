@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="backjoon 2739&#10;- for문 이용 간단한 구구단 구현">
-      <change afterPath="$PROJECT_DIR$/src/simpleQuiz/Number10952.java" afterDir="false" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="backjoon 10952&#10;- 맨 마지막에 0 0 을 입력 받는 것을 활용하여 while문으로 입력 값들을 받아준다.&#10;Stringbuilder를 사용하여 합계를 담아서 출력해준다.">
+      <change afterPath="$PROJECT_DIR$/src/backjoon/Number10951.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,9 +48,9 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.Number10952">
-    <configuration name="Number10818" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="simpleQuiz.Number10818" />
+  <component name="RunManager" selected="Application.Number10951">
+    <configuration name="Number10950" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="simpleQuiz.Number10950" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -62,12 +62,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Number10950" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="simpleQuiz.Number10950" />
+    <configuration name="Number10951" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="backjoon.Number10951" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="simpleQuiz.*" />
+          <option name="PATTERN" value="backjoon.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Number10951" />
         <item itemvalue="Application.Number10952" />
         <item itemvalue="Application.Number10950" />
         <item itemvalue="Application.Number2739" />
         <item itemvalue="Application.Number2675" />
-        <item itemvalue="Application.Number10818" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +184,7 @@
       <workItem from="1645018310150" duration="441000" />
       <workItem from="1645018788539" duration="2250000" />
       <workItem from="1645092486908" duration="1568000" />
-      <workItem from="1645188167627" duration="3755000" />
+      <workItem from="1645188167627" duration="6705000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -473,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645093564372</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="backjoon 10952&#10;- 맨 마지막에 0 0 을 입력 받는 것을 활용하여 while문으로 입력 값들을 받아준다.&#10;Stringbuilder를 사용하여 합계를 담아서 출력해준다.">
+      <created>1645194191540</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1645194191540</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="file test" />
     <MESSAGE value="1000 이하의 소수를 나열" />
     <MESSAGE value="BufferedReader 기초" />
     <MESSAGE value="문자열의 길이가 4 혹은 6이고, 숫자로만 구성되어있는지 확인" />
@@ -516,6 +522,7 @@
     <MESSAGE value="backjoon 2753&#10;-" />
     <MESSAGE value="backjoon 10950&#10;- StringTokenizer를 사용하여 공백을 기준으로 문자열을 분리해주고, StringBuilder를 사용하여 A+B 값을 모두 저장한다." />
     <MESSAGE value="backjoon 2739&#10;- for문 이용 간단한 구구단 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="backjoon 2739&#10;- for문 이용 간단한 구구단 구현" />
+    <MESSAGE value="backjoon 10952&#10;- 맨 마지막에 0 0 을 입력 받는 것을 활용하여 while문으로 입력 값들을 받아준다.&#10;Stringbuilder를 사용하여 합계를 담아서 출력해준다." />
+    <option name="LAST_COMMIT_MESSAGE" value="backjoon 10952&#10;- 맨 마지막에 0 0 을 입력 받는 것을 활용하여 while문으로 입력 값들을 받아준다.&#10;Stringbuilder를 사용하여 합계를 담아서 출력해준다." />
   </component>
 </project>
