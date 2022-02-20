@@ -1,9 +1,9 @@
 package chap04;
 
 public class IntStack {
-    static int max;    // 스택 용량
-    static int ptr;    // 스택 포인터
-    static int[] stk;  // 스택 본체
+    private int max;    // 스택 용량
+    private int ptr;    // 스택 포인터
+    private int[] stk;  // 스택 본체
     
     // 실행 시 예외 : 스택이 비어있음
     public class EmptyIntStackException extends RuntimeException {
@@ -11,7 +11,7 @@ public class IntStack {
     }
     
     // 실행 시 예외 : 스택이 가득 참
-    public static class OverflowIntStackException extends RuntimeException {
+    public class OverflowIntStackException extends RuntimeException {
         public OverflowIntStackException() { }
     }
     
@@ -27,7 +27,7 @@ public class IntStack {
     }
 
     // 스택에 x를 푸시
-    public static int push(int x) throws OverflowIntStackException {
+    public int push(int x) throws OverflowIntStackException {
         if (ptr >= max) {
             throw new OverflowIntStackException();
         }
@@ -86,7 +86,7 @@ public class IntStack {
     }
 
     // 스택 안의 모든 데이터를 바닥 -> 꼭대기 순서로 출력
-    public static void dump() {
+    public void dump() {
         if (ptr <= 0) {
             System.out.println("스택이 비어 있습니다.");
         } else {
@@ -95,14 +95,6 @@ public class IntStack {
             }
             System.out.println();
         }
-    }
-
-    public static void main(String[] args) {
-        IntStack ins = new IntStack(8);
-        for (int i=0; i<max; i++) {
-            push((int)(Math.random()*50)+1);
-        }
-        dump();
     }
 
 }
