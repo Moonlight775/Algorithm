@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다." />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backjoon/Number2884.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backjoon/Number2884.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +186,7 @@
       <workItem from="1645092486908" duration="1568000" />
       <workItem from="1645188167627" duration="7522000" />
       <workItem from="1645286994722" duration="7402000" />
-      <workItem from="1645432718594" duration="2546000" />
+      <workItem from="1645432718594" duration="2654000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -507,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645434920286</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다.">
+      <created>1645435285679</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1645435285679</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

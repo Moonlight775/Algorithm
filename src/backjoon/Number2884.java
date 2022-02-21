@@ -24,7 +24,7 @@ public class Number2884 {
     }
 }
 
-        //        Scanner sc = new Scanner(System.in);
+//        Scanner sc = new Scanner(System.in);
 //
 //        int H = sc.nextInt();
 //        int M = sc.nextInt();
