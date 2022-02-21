@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="스택의 기본 테스트&#10;- 앞서 정의해둔 메서드들(IntStack.java)을 사용하여 푸시, 팝, 피크, 덤프를 해볼 수 있는 프로그램 작성">
-      <change afterPath="$PROJECT_DIR$/src/backjoon/Number2884.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +43,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RunManager" selected="Application.Number2884">
     <configuration name="IntStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -186,7 +183,7 @@
       <workItem from="1645092486908" duration="1568000" />
       <workItem from="1645188167627" duration="7522000" />
       <workItem from="1645286994722" duration="7402000" />
-      <workItem from="1645432718594" duration="2025000" />
+      <workItem from="1645432718594" duration="2546000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -503,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645340903952</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다.">
+      <created>1645434920286</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1645434920286</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +525,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="입력 받은 10진수를 2진수~36진수로 기수 변환" />
     <MESSAGE value="버블 정렬" />
     <MESSAGE value="1~30 3의 배수이면 Fizz, 5의 배수이면 Buzz, 3과 5의 배수이면 FizzBuzz 출력" />
     <MESSAGE value="Create Quiz" />
@@ -546,6 +549,7 @@
     <MESSAGE value="backjoon 10951&#10;- 입력이 끝나는 지점이 주어지지 않으므로 EOF 처리를 해야한다.&#10;EOF (End Of File) : 데이터 소스로부터 더 이상 읽을 수 있는 데이터가 없음을 나타내는 용어&#10;BufferedWriter로 출력을 할 경우 String으로 출력 되므로 정수형은 String으로 변환해주어야 한다." />
     <MESSAGE value="스택의 기본&#10;- 생성자, push, pop, peek, indexOf, clear, capacity, size, isEmpty, isFull, dump" />
     <MESSAGE value="스택의 기본 테스트&#10;- 앞서 정의해둔 메서드들(IntStack.java)을 사용하여 푸시, 팝, 피크, 덤프를 해볼 수 있는 프로그램 작성" />
-    <option name="LAST_COMMIT_MESSAGE" value="스택의 기본 테스트&#10;- 앞서 정의해둔 메서드들(IntStack.java)을 사용하여 푸시, 팝, 피크, 덤프를 해볼 수 있는 프로그램 작성" />
+    <MESSAGE value="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다." />
+    <option name="LAST_COMMIT_MESSAGE" value="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다." />
   </component>
 </project>
