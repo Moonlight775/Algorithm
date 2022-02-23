@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="backjoon 14681&#10;- if문을 사용하여 x,y 값에 따라 몇 사분면에 속하는지 구한다." />
-=======
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다.">
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/backjoon/Number2525.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backjoon/Number2884.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backjoon/Number2884.java" afterDir="false" />
     </list>
->>>>>>> c03f56eec130a2dcd2cf192edfcaf5ea7bace875
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +49,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
-  <component name="RunManager" selected="Application.Number2884">
+  <component name="RunManager" selected="Application.Number2525">
     <configuration name="IntStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chap04.IntStack" />
       <module name="Algorithm" />
@@ -79,8 +76,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Number10951" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="backjoon.Number10951" />
+    <configuration name="Number14681" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="backjoon.Number14681" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -92,8 +89,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Number14681" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="backjoon.Number14681" />
+    <configuration name="Number2525" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="backjoon.Number2525" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -120,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Number2525" />
         <item itemvalue="Application.Number2884" />
         <item itemvalue="Application.Number14681" />
         <item itemvalue="Application.IntStackTester" />
         <item itemvalue="Application.IntStack" />
-        <item itemvalue="Application.Number10951" />
       </list>
     </recent_temporary>
   </component>
@@ -189,12 +186,8 @@
       <workItem from="1645018788539" duration="2250000" />
       <workItem from="1645092486908" duration="1568000" />
       <workItem from="1645188167627" duration="7522000" />
-<<<<<<< HEAD
-      <workItem from="1645286994722" duration="8166000" />
-=======
       <workItem from="1645286994722" duration="7402000" />
       <workItem from="1645432718594" duration="2654000" />
->>>>>>> c03f56eec130a2dcd2cf192edfcaf5ea7bace875
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -511,16 +504,6 @@
       <option name="project" value="LOCAL" />
       <updated>1645340903952</updated>
     </task>
-<<<<<<< HEAD
-    <task id="LOCAL-00046" summary="backjoon 14681&#10;- if문을 사용하여 x,y 값에 따라 몇 사분면에 속하는지 구한다.">
-      <created>1645357115781</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1645357115781</updated>
-    </task>
-    <option name="localTasksCounter" value="47" />
-=======
     <task id="LOCAL-00046" summary="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다.">
       <created>1645434920286</created>
       <option name="number" value="00046" />
@@ -536,7 +519,6 @@
       <updated>1645435285679</updated>
     </task>
     <option name="localTasksCounter" value="48" />
->>>>>>> c03f56eec130a2dcd2cf192edfcaf5ea7bace875
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,12 +560,7 @@
     <MESSAGE value="backjoon 10951&#10;- 입력이 끝나는 지점이 주어지지 않으므로 EOF 처리를 해야한다.&#10;EOF (End Of File) : 데이터 소스로부터 더 이상 읽을 수 있는 데이터가 없음을 나타내는 용어&#10;BufferedWriter로 출력을 할 경우 String으로 출력 되므로 정수형은 String으로 변환해주어야 한다." />
     <MESSAGE value="스택의 기본&#10;- 생성자, push, pop, peek, indexOf, clear, capacity, size, isEmpty, isFull, dump" />
     <MESSAGE value="스택의 기본 테스트&#10;- 앞서 정의해둔 메서드들(IntStack.java)을 사용하여 푸시, 팝, 피크, 덤프를 해볼 수 있는 프로그램 작성" />
-<<<<<<< HEAD
-    <MESSAGE value="backjoon 14681&#10;- if문을 사용하여 x,y 값에 따라 몇 사분면에 속하는지 구한다." />
-    <option name="LAST_COMMIT_MESSAGE" value="backjoon 14681&#10;- if문을 사용하여 x,y 값에 따라 몇 사분면에 속하는지 구한다." />
-=======
     <MESSAGE value="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다." />
     <option name="LAST_COMMIT_MESSAGE" value="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다." />
->>>>>>> c03f56eec130a2dcd2cf192edfcaf5ea7bace875
   </component>
 </project>
