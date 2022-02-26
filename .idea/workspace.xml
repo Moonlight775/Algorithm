@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다.">
-      <change afterPath="$PROJECT_DIR$/src/backjoon/Number10718.java" afterDir="false" />
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="백준 2525&#10;- 시작하는 시간에 요리하는데 필요한 시간(분단위)을 더해주는데, 필요한 시간이 분 단위이므로 시는 60을 나눠서 구해주고 분은 60의 나머지로 구한다.&#10; 분이 60이 넘어가면 60미만이 될 때까지 분에 60을 빼주면서 시는 1시간씩 늘려준다.">
+      <change afterPath="$PROJECT_DIR$/src/backjoon/Number10773.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backjoon/Number2884.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backjoon/Number2884.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
-  <component name="RunManager" selected="Application.Number10718">
+  <component name="RunManager" selected="Application.Number10773">
     <configuration name="IntStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chap04.IntStack" />
       <module name="Algorithm" />
@@ -76,8 +75,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Number10951" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="backjoon.Number10951" />
+    <configuration name="Number10773" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="backjoon.Number10773" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -117,12 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Number2525" />
+        <item itemvalue="Application.Number10773" />
         <item itemvalue="Application.Number2884" />
         <item itemvalue="Application.Number14681" />
         <item itemvalue="Application.IntStackTester" />
         <item itemvalue="Application.IntStack" />
-        <item itemvalue="Application.Number10951" />
       </list>
     </recent_temporary>
   </component>
@@ -189,6 +187,9 @@
       <workItem from="1645188167627" duration="7522000" />
       <workItem from="1645286994722" duration="7402000" />
       <workItem from="1645432718594" duration="2654000" />
+      <workItem from="1645630168194" duration="786000" />
+      <workItem from="1645850923647" duration="83000" />
+      <workItem from="1645851040361" duration="6585000" />
     </task>
     <task id="LOCAL-00001" summary="import test in IntelliJ">
       <created>1638716398464</created>
@@ -519,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645435285679</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="백준 2525&#10;- 시작하는 시간에 요리하는데 필요한 시간(분단위)을 더해주는데, 필요한 시간이 분 단위이므로 시는 60을 나눠서 구해주고 분은 60의 나머지로 구한다.&#10; 분이 60이 넘어가면 60미만이 될 때까지 분에 60을 빼주면서 시는 1시간씩 늘려준다.">
+      <created>1645621672959</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1645621672959</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="버블 정렬" />
     <MESSAGE value="1~30 3의 배수이면 Fizz, 5의 배수이면 Buzz, 3과 5의 배수이면 FizzBuzz 출력" />
     <MESSAGE value="Create Quiz" />
     <MESSAGE value="나누어 떨어지는 숫자 배열" />
@@ -562,6 +569,23 @@
     <MESSAGE value="스택의 기본&#10;- 생성자, push, pop, peek, indexOf, clear, capacity, size, isEmpty, isFull, dump" />
     <MESSAGE value="스택의 기본 테스트&#10;- 앞서 정의해둔 메서드들(IntStack.java)을 사용하여 푸시, 팝, 피크, 덤프를 해볼 수 있는 프로그램 작성" />
     <MESSAGE value="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다." />
-    <option name="LAST_COMMIT_MESSAGE" value="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다." />
+    <MESSAGE value="백준 2525&#10;- 시작하는 시간에 요리하는데 필요한 시간(분단위)을 더해주는데, 필요한 시간이 분 단위이므로 시는 60을 나눠서 구해주고 분은 60의 나머지로 구한다.&#10; 분이 60이 넘어가면 60미만이 될 때까지 분에 60을 빼주면서 시는 1시간씩 늘려준다." />
+    <option name="LAST_COMMIT_MESSAGE" value="백준 2525&#10;- 시작하는 시간에 요리하는데 필요한 시간(분단위)을 더해주는데, 필요한 시간이 분 단위이므로 시는 60을 나눠서 구해주고 분은 60의 나머지로 구한다.&#10; 분이 60이 넘어가면 60미만이 될 때까지 분에 60을 빼주면서 시는 1시간씩 늘려준다." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/backjoon/Number10773.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="stk" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
