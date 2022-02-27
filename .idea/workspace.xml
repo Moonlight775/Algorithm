@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="백준 10773&#10;- 배열을 활용&#10;- 0이 입력될 경우 스택포인터의 위치를 감소시키며 합해야 할 top의 개수를 구한다.">
+    <list default="true" id="02a60422-8322-4606-849d-cc4bd387d66b" name="Changes" comment="백준 10773&#10;- Stack 클래스를 이용&#10;- 0일 경우 pop() 메소드를 사용하여 top 원소를 지운다.&#10;- add() 메소드와 push() 메소드 모두 가장 마지막 위치에 원소를 추가하는 같은 동작을 하는 메소드다.">
+      <change afterPath="$PROJECT_DIR$/src/backjoon/Number10171.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backjoon/Number10773.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backjoon/Number10773.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +48,9 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
-  <component name="RunManager" selected="Application.Number10773">
-    <configuration name="IntStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap04.IntStack" />
+  <component name="RunManager" selected="Application.Number10171">
+    <configuration name="IntStackTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chap04.IntStackTester" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -62,12 +62,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntStackTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap04.IntStackTester" />
+    <configuration name="Number10171" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="backjoon.Number10171" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chap04.*" />
+          <option name="PATTERN" value="backjoon.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Number10171" />
         <item itemvalue="Application.Number10773" />
         <item itemvalue="Application.Number2884" />
         <item itemvalue="Application.Number14681" />
         <item itemvalue="Application.IntStackTester" />
-        <item itemvalue="Application.IntStack" />
       </list>
     </recent_temporary>
   </component>
@@ -189,14 +189,8 @@
       <workItem from="1645432718594" duration="2654000" />
       <workItem from="1645630168194" duration="786000" />
       <workItem from="1645850923647" duration="83000" />
-      <workItem from="1645851040361" duration="7206000" />
-    </task>
-    <task id="LOCAL-00001" summary="import test in IntelliJ">
-      <created>1638716398464</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1638716398464</updated>
+      <workItem from="1645851040361" duration="7916000" />
+      <workItem from="1645932251829" duration="117000" />
     </task>
     <task id="LOCAL-00002" summary="Find min in three number">
       <created>1639661767807</created>
@@ -534,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645864551347</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="백준 10773&#10;- Stack 클래스를 이용&#10;- 0일 경우 pop() 메소드를 사용하여 top 원소를 지운다.&#10;- add() 메소드와 push() 메소드 모두 가장 마지막 위치에 원소를 추가하는 같은 동작을 하는 메소드다.">
+      <created>1645864972446</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1645864972447</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +553,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create Quiz" />
     <MESSAGE value="나누어 떨어지는 숫자 배열" />
     <MESSAGE value="1000 이하의 소수를 모두 나열" />
     <MESSAGE value="Revision 54 수정&#10;- 음수가 들어오더라도 합할 수 있도록 Math.abs() 추가" />
@@ -577,7 +577,8 @@
     <MESSAGE value="백준 2884&#10;- 분이 45보다 작으면 시를 -1 &amp; 분은 60-(45-분) 을 해주어야한다.&#10;또한 시가 0보다 작다면 23시로 변환해준다." />
     <MESSAGE value="백준 2525&#10;- 시작하는 시간에 요리하는데 필요한 시간(분단위)을 더해주는데, 필요한 시간이 분 단위이므로 시는 60을 나눠서 구해주고 분은 60의 나머지로 구한다.&#10; 분이 60이 넘어가면 60미만이 될 때까지 분에 60을 빼주면서 시는 1시간씩 늘려준다." />
     <MESSAGE value="백준 10773&#10;- 배열을 활용&#10;- 0이 입력될 경우 스택포인터의 위치를 감소시키며 합해야 할 top의 개수를 구한다." />
-    <option name="LAST_COMMIT_MESSAGE" value="백준 10773&#10;- 배열을 활용&#10;- 0이 입력될 경우 스택포인터의 위치를 감소시키며 합해야 할 top의 개수를 구한다." />
+    <MESSAGE value="백준 10773&#10;- Stack 클래스를 이용&#10;- 0일 경우 pop() 메소드를 사용하여 top 원소를 지운다.&#10;- add() 메소드와 push() 메소드 모두 가장 마지막 위치에 원소를 추가하는 같은 동작을 하는 메소드다." />
+    <option name="LAST_COMMIT_MESSAGE" value="백준 10773&#10;- Stack 클래스를 이용&#10;- 0일 경우 pop() 메소드를 사용하여 top 원소를 지운다.&#10;- add() 메소드와 push() 메소드 모두 가장 마지막 위치에 원소를 추가하는 같은 동작을 하는 메소드다." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
