@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.StringTokenizer;
 
 public class Number10814 {
@@ -27,11 +26,8 @@ public class Number10814 {
             p[i].setName(name);     // 이름 초기화
         }
 
-        Arrays.sort(p, new Comparator<Person>() {
-            @Override
-            public int compare(Person o1, Person o2) {
-                return o1.age - o2.age;     // 나이순으로 정렬
-            }
+        Arrays.sort(p, (o1, o2) -> {    // 람다식
+            return o1.age - o2.age; // 나이순으로 정렬
         });
 
         for (Person i : p) {
@@ -46,16 +42,8 @@ public class Number10814 {
         int age;
         String name;
 
-        public int getAge() {
-            return age;
-        }
-
         public void setAge(int age) {
             this.age = age;
-        }
-
-        public String getName() {
-            return name;
         }
 
         public void setName(String name) {
