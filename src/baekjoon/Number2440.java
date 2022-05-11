@@ -10,10 +10,7 @@ public class Number2440 {
         int N = sc.nextInt();
 
         for (int i=N; i>0; i--) {
-            for (int j=i; j>0; j--) {
-                sb.append("*");
-            }
-            sb.append('\n');
+            sb.append("*".repeat(i)).append('\n');   // repeat()에 반복 횟수가 들어간다.
         }
 
         System.out.println(sb);
