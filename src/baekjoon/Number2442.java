@@ -11,13 +11,11 @@ public class Number2442 {
 
         for (int i=1; i<=N; i++) {          // N만큼 for문을 돌려준다.
 
-            for (int j=N-i; j>0; j--) {     // 줄마다 공백의 수는 N-i와 같다.
-                sb.append(" ");
-            }
+            // 줄마다 공백의 수는 N-i와 같다.
+            sb.append(" ".repeat(N - i));
 
-            for (int k=0; k<(2*i)-1; k++) { // 줄마다 별의 수는 (2Xi)-1와 같다.
-                sb.append("*");
-            }
+            // 줄마다 별의 수는 (2Xi)-1와 같다.
+            sb.append("*".repeat((2 * i) - 1));
 
             sb.append('\n');
         }
