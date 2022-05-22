@@ -26,48 +26,24 @@ public class Number10845 {
                     break;
 
                 case "pop" :
-                    if (!que.isEmpty()) {
-                        sb.append(que.poll()).append('\n');
-                        break;
-                    }
-                    else {
-                        sb.append(-1).append('\n');
-                        break;
-                    }
+                    sb.append(que.isEmpty()? -1 : que.poll()).append('\n');
+                    break;
 
                 case "size" :
                     sb.append(que.size()).append('\n');
                     break;
 
                 case "empty" :
-                    if (!que.isEmpty()) {
-                        sb.append(0).append('\n');
-                        break;
-                    }
-                    else {
-                        sb.append(1).append('\n');
-                        break;
-                    }
+                    sb.append(que.isEmpty()? 1 : 0).append('\n');
+                    break;
 
                 case "front" :
-                    if (!que.isEmpty()) {
-                        sb.append(que.peek()).append('\n');
-                        break;
-                    }
-                    else {
-                        sb.append(-1).append('\n');
-                        break;
-                    }
+                    sb.append(que.isEmpty()? -1 : que.peek()).append('\n');
+                    break;
 
                 case "back" :
-                    if (!que.isEmpty()) {
-                        sb.append(back).append('\n');
-                        break;
-                    }
-                    else {
-                        sb.append(-1).append('\n');
-                        break;
-                    }
+                    sb.append(que.isEmpty()? -1 : back).append('\n');
+                    break;
 
             }
 
