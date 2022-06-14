@@ -17,8 +17,8 @@ public class Number1037 {
         for (int i=0; i<number; i++) {
             int A = Integer.parseInt(st.nextToken());   // 진짜 약수
 
-            max = A > max ? A : max;    // 첫 약수는 정수 최소값보다 크므로 max가 초기화된다.
-            min = A < min ? A : min;    // 첫 약수는 정수 최대값보다 크므로 min가 초기화된다.
+            max = Math.max(A, max);    // 첫 약수는 정수 최소값보다 크므로 max가 초기화된다.
+            min = Math.min(A, min);    // 첫 약수는 정수 최대값보다 크므로 min가 초기화된다.
         }
 
         System.out.println(min * max);
