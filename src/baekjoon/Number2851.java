@@ -12,17 +12,10 @@ public class Number2851 {
         int result = 0;
 
         for (int i=0; i<10; i++) {
-            int score = Integer.parseInt(br.readLine());
+            sum += Integer.parseInt(br.readLine());
 
-            if (sum < 100) {
-                sum += score;
-
-                if (Math.abs(result-100) > Math.abs(sum-100)) {
-                    result = sum;
-                }
-                else if (Math.abs(result-100) == Math.abs(sum-100)) {
-                    result = result > sum ? result : sum;
-                }
+            if (Math.abs(result-100) >= Math.abs(sum-100)) {
+                result = sum;
             }
         }
         System.out.println(result);
