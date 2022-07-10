@@ -20,8 +20,8 @@ public class Number1145 {
         int count = 0;  // 나누어지는 횟수
 
         while (true) {
-            for (int i=0; i<arr.length; i++) {
-                if (num % arr[i] == 0) {    // 다섯 개의 자연수 중 나누어진다면
+            for (int value : arr) {
+                if (num % value == 0) {    // 다섯 개의 자연수 중 나누어진다면
                     count++;                // count 증가
                 }
 
