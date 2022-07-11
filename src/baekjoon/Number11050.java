@@ -18,18 +18,20 @@ public class Number11050 {
 
         dp = new int[N+1][K+1];
 
-        System.out.println(BC(N,K));
-    }
-
-    static int BC(int n, int k) {
-        if (dp[n][k] > 0) {     // 이미 풀었던 sub문제일 경우 값을 재활용
-            return dp[n][k];
+        for (int i=0; i<=K; i++) {      // N == K
+            dp[i][i] = 1;
         }
 
-        if (k == 0 || n == k) {     // nC0 = nCn = 1
-            return dp[n][k] = 1;
+        for (int i=0; i<=N; i++) {      // K == 0
+            dp[i][0] = 1;
         }
 
-        return dp[n][k] = BC(n-1, k-1) + BC(n-1, k);    // nCr = n-1Cr-1 + n-1Cr (파스칼의 법칙)
+        for (int i=2; i<=N; i++) {
+            for (int j=1; j<=K; j++) {
+                dp[i][j] = dp[i-1][j-1] + dp[i-1][j];
+            }
+        }
+
+        System.out.println(dp[N][K]);
     }
 }
