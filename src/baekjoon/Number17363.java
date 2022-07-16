@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
+import java.lang.StringBuilder;
 
 public class Number17363 {
     public static void main(String[] args) throws IOException {
@@ -56,12 +57,14 @@ public class Number17363 {
             }
         }
 
+        StringBuilder sb = new StringBuilder();
         for (char[] i : result) {
             for (char j: i) {
-                System.out.print(j);
+                sb.append(j);
             }
-            System.out.println();
+            sb.append('\n');
         }
 
+        System.out.println(sb);
     }
 }
