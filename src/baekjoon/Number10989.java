@@ -19,9 +19,9 @@ public class Number10989 {
         StringBuilder sb = new StringBuilder();
 
         for (int i=1; i<count.length; i++) {
-            while (count[i] > 0) {              // index i가 0이 될 때 까지
+            while (count[i] > 0) {              // count[i] 값이 0이 될 때 까지
                 sb.append(i).append('\n');      // index i의 i가 출력해야 하는 값
-                count[i]--;                     // 한 번 출력했다면 -1을 해줘서 0이 될 때가지 반복 되도록 한다.
+                count[i]--;                     // 한 번 출력했다면 -1을 해줘서 값이 0이 될 때가지 반복 되도록 한다.
             }
         }
         System.out.println(sb);
