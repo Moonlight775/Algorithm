@@ -3,6 +3,7 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class Number2108 {
     public static void main(String[] args) throws IOException {
@@ -10,7 +11,54 @@ public class Number2108 {
 
         int N = Integer.parseInt(br.readLine());
 
-        int[] arr = new int[8001];  // 입력값의 범위 절대값 4000, -4000 ~ 4000
+        int[] arr =new int[N];
+        int sum = 0;
+
+        for (int i=0; i<N; i++) {
+            int value = Integer.parseInt(br.readLine());
+            arr[i] = value;
+            sum += value;   // 총 합계
+        }
+
+        Arrays.sort(arr);
+
+        boolean flag = false;
+        int mode_max = 0;
+        int mode = 10000;   // 최빈값
+
+        for (int i=0; i<N; i++) {
+            int jump = 0;   // 동일한 수가 나온만큼 i 값 jump 시킬 변수
+            int count = 1;
+            int i_value = arr[i];
+
+            for (int j=i+1; j<N; j++) {
+                if (i_value != arr[j]) {
+                    break;
+                }
+                count++;    // 동일한 수의 개수
+                jump++;
+            }
+
+            if (count > mode_max) {
+                mode_max = count;
+                mode = i_value;
+                flag = true;
+            }
+            else if (count == mode_max && flag == true) {
+                mode = i_value;
+                flag = false;
+            }
+
+            i += jump;
+        }
+
+        System.out.println((int)Math.round((double)sum / N));
+        System.out.println(arr[N/2]);   // index는 0부터 시작하므로
+        System.out.println(mode);
+        System.out.println(arr[N-1] - arr[0]);
+
+
+        /*int[] arr = new int[8001];  // 입력값의 범위 절대값 4000, -4000 ~ 4000
 
         int sum = 0;    // 총 합계
         int max = Integer.MIN_VALUE;    // 최댓값
@@ -65,6 +113,6 @@ public class Number2108 {
         System.out.println((int)Math.round((double)sum / N));   // 산술평균
         System.out.println(median);     // 중앙값
         System.out.println(mode);       // 최빈값
-        System.out.println(max - min);  // 범위
+        System.out.println(max - min);  // 범위*/
     }
 }
