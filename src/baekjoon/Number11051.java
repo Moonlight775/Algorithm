@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 public class Number11051 {
 
-    static final int div = 10007;
+    static int[][] dp;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -16,38 +16,21 @@ public class Number11051 {
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
 
-        // n! / ((n-k)! * k!) -> n! * ((n-k)! * k!)^(-1) 으로 변환
-        // ((n-k)! * k!)^(-1) == ((n-k)! * k!)^(p-2) 동치
-        // p(=div)가 소수여서 가능함
+        dp = new int[N+1][K+1];
 
-        System.out.println((factorial(N) * mod_inverse((factorial(N-K) * factorial(K)) % div, div-2)) % div);
+        System.out.println(BC(N, K));
     }
 
-    static int factorial(int N) {
-        // factorial(0) == 1
-        if (N <= 1) {
-            return 1;
+    static int BC(int n, int k) {
+        if (dp[n][k] > 0) {     // 이미 값이 있으면 재활용
+            return dp[n][k];
         }
 
-        return (N * factorial(N-1)) % div;
-    }
-
-    // 역원 구하기 (= 제곱승 구하기)
-    static int mod_inverse(int a, int p) {
-        int ret = 1;
-
-        while (p > 0) {
-            if (p % 2 == 1) {
-                ret *= a;
-                p--;
-                ret %= div;
-            }
-
-            a *= a;
-            a %= div;
-            p >>= 1;    // p = p/2 랑 동치
+        if (n == k || k == 0) {     // nCn = nC0 = 1
+            return dp[n][k] = 1;
         }
 
-        return ret;
+        return dp[n][k] = (BC(n-1, k-1) + BC(n-1, k)) % 10007;  // nCr = n-1Cr-1 + n-1Cr
+
     }
 }
