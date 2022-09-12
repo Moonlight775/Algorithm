@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Number2559 {
+
+    static int max = Integer.MIN_VALUE;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -14,7 +17,6 @@ public class Number2559 {
         int K = Integer.parseInt(st.nextToken());   // 합을 구하기 위한 연속적인 날짜의 수
 
         int[] arr = new int[N];
-        int sum = 0;
 
         st = new StringTokenizer(br.readLine());
         // 전체 날짜에 대한 온도 배열 초기화
@@ -22,18 +24,16 @@ public class Number2559 {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        for (int i=0; i<N-K; i++) {         // 조건 범위는 (N-K)까지면 된다, i는 온도 합의 시작점과 같기 때문
+        for (int i=0; i<N+1-K; i++) {         // 조건 범위는 (N+1-K)까지면 된다, i는 온도 합의 시작점과 같기 때문
             int tmp = 0;
 
             for (int j=i; j<i+K; j++) {     // i가 시작점 j는 끝을 나타내므로 조건 범위는 (i+K)
                 tmp += arr[j];
             }
 
-            if (sum < tmp) {
-                sum = tmp;
-            }
+            max = Math.max(max, tmp);
         }
 
-        System.out.println(sum);
+        System.out.println(max);
     }
 }
