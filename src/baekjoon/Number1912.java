@@ -29,22 +29,13 @@ public class Number1912 {
         dp[0] = arr[0];
         max = arr[0];
 
-        // dp의 마지막 index는 n-1이므로 n-1부터 Top-Down 탐색
-        recur(n-1);
+        for (int i=1; i<n; i++) {
+            dp[i] = Math.max(dp[i-1] + arr[i], arr[i]);
+
+            // 최댓값 갱신
+            max = Math.max(dp[i], max);
+        }
 
         System.out.println(max);
     }
-
-    public static int recur(int n) {
-        // 탐색하지 않은 index라면
-        if (dp[n] == null) {
-            dp[n] = Math.max(recur(n-1) + arr[n], arr[n]);
-
-            // dp[n]과 max 중 큰 값으로 max 갱신
-            max = Math.max(dp[n], max);
-        }
-
-        return dp[n];
-    }
-
 }
