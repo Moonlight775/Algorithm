@@ -44,8 +44,7 @@ public class Number1972 {
                 // j+index가 문자열 크기보다 커지면 Exception이 떨어지므로 종료
                 if (j+index >= str.length()) break;
 
-                String S = "";
-                S += str.charAt(j) + String.valueOf(str.charAt(j+index));
+                String S = str.charAt(j) + String.valueOf(str.charAt(j+index));
 
                 if (set.contains(S)) {
                     sb.append(str).append(" is NOT surprising.").append('\n');
