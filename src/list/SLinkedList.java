@@ -2,6 +2,8 @@ package list;
 
 import Interface_form.List;
 
+import java.util.NoSuchElementException;
+
 public class SLinkedList<E> implements List<E> {
 
     private Node<E> head;   // 노드의 첫 부분
@@ -38,10 +40,12 @@ public class SLinkedList<E> implements List<E> {
         size++;
 
 
-        /* 다음에 가리킬 노드가 없는 경우 (=데이터가 새 노드밖에 없는 경우)
+        /*
+        * 다음에 가리킬 노드가 없는 경우 (=데이터가 새 노드밖에 없는 경우)
         * 데이터가 한 개 (새 노드)밖에 없으므로 새 노드는 처음 시작노드이자
         * 마지막 노드다. 즉 tail = head 다.
-        */
+        * */
+
         if (head.next == null) {
             tail = head;
         }
@@ -62,9 +66,11 @@ public class SLinkedList<E> implements List<E> {
         }
 
 
-        /* 마지막 노드(tail)의 다음 노드(next)가 새 노드를 가리키도록 하고
+       /*
+        * 마지막 노드(tail)의 다음 노드(next)가 새 노드를 가리키도록 하고
         * tail이 가리키는 노드를 새 노드로 바꿔준다.
-        */
+        * */
+
         tail.next = newNode;
         tail = newNode;
         size++;
@@ -97,13 +103,157 @@ public class SLinkedList<E> implements List<E> {
         Node<E> newNode = new Node<E>(value);
 
 
-        /* 이전 노드가 가리키는 노드를 끊은 뒤 새 노드로 변경해준다.
+        /*
+        * 이전 노드가 가리키는 노드를 끊은 뒤 새 노드로 변경해준다.
         * 또한 새 노드가 가리키는 노드는 next_Node로 설정해준다.
         */
+
         prev_Node.next = null;
         prev_Node.next = newNode;
         newNode.next = next_Node;
         size++;
+    }
+
+    public E remove() {
+
+        Node<E> headNode = head;
+
+        if (headNode == null) {
+            throw new NoSuchElementException();
+        }
+
+        // 삭제된 노드를 반환하기 위한 임시 변수
+        E element = headNode.data;
+
+        // head의 다음 노드
+        Node<E> nextNode = head.next;
+
+        // head 노드의 데이터들을 모두 삭제
+        head.data = null;
+        head.next = null;
+
+        // head가 다음 노드를 가리키도록 업데이트
+        head = nextNode;
+        size--;
+
+
+        /*
+        * 삭제된 요소가 리스트의 유일한 요소였을 경우
+        * 그 요소는 head 이자 tail 이었으므로
+        * 삭제되면서 tail도 가리킬 요소가 없기 때문에
+        * size가 0일 경우 tail도 null로 변환
+        * */
+
+        if (size == 0) {
+            tail = null;
+        }
+        return element;
+    }
+
+    @Override
+    public E remove(int index) {
+        // 삭제하려는 노드가 첫 번째 원소일 경우
+        if (index == 0) {
+            return remove();
+        }
+
+        // 잘못된 범위에 대한 예외
+        if (index >= size || index < 0) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        Node<E> prevNode = search(index - 1);   // 삭제할 노드의 이전 노드
+        Node<E> removedNode = prevNode.next;    // 삭제할 노드
+        Node<E> nextNode = removedNode.next;    // 삭제할 노드의 다음 노드
+
+        E element = removedNode.data;   // 삭제되는 노드의 데이터를 반환하기 위한 임시변수
+
+        // 이전 노드가 가리키는 노드를 삭제하려는 노드의 다음노드로 변경
+        prevNode.next = nextNode;
+
+        // 만약 삭제했던 노드가 마지막 노드라면 tail을 prevNode로 갱신
+        if (prevNode.next == null) {
+            tail = prevNode;
+        }
+
+        // 데이터 삭제
+        removedNode.next = null;
+        removedNode.data = null;
+        size--;
+
+        return element;
+    }
+
+    @Override
+    public boolean remove(Object value) {
+
+        Node<E> prevNode = head;
+        boolean hasValue = false;
+        Node<E> x = head;   // removedNode
+
+        // value와 일치하는 노드를 찾는다.
+        for (; x!=null; x=x.next) {
+            if (value.equals(x.data)) {
+                hasValue = true;
+                break;
+            }
+            prevNode = x;
+        }
+
+        // 일치하는 요소가 없을 경우 false 반환
+        if (x == null) {
+            return false;
+        }
+
+        // 만약 삭제하려는 노드가 head라면 기존 remove()를 사용
+        if (x.equals(head)) {
+            remove();
+            return true;
+        }
+        else {
+            // 이전 노드의 링크를 삭제하려는 노드의 다음 노드로 연결
+            prevNode.next = x.next;
+
+            // 만약 삭제했던 노드가 마지막 노드라면 tail을 prevNode로 갱신
+            if (prevNode.next == null) {
+                tail = prevNode;
+            }
+            x.data = null;
+            x.next = null;
+            size--;
+            return true;
+        }
+    }
+
+    @Override
+    public E get(int index) {
+        return search(index).data;
+    }
+
+    @Override
+    public void set(int index, E value) {
+        Node<E> replaceNode = search(index);
+        replaceNode.data = null;
+        replaceNode.data = value;
+    }
+
+    @Override
+    public int indexOf(Object value) {
+        int index = 0;
+
+        for (Node<E> x=head; x!=null; x=x.next) {
+            if (value.equals(x.data)) {
+                return index;
+            }
+            index++;
+        }
+        // 찾고자 하는 요소를 찾지 못했을 경우 -1 반환
+        return -1;
+    }
+
+    @Override
+    public boolean contains(Object item) {
+        return indexOf(item) >= 0;
     }
 
 }
