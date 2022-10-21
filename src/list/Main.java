@@ -2,11 +2,11 @@ package list;
 
 public class Main{
     public static void main(String[] args) throws CloneNotSupportedException {
-        ArrayList<Integer> original = new ArrayList<>();
+        SLinkedList<Integer> original = new SLinkedList<>();
         original.add(10);   // original에 10추가
 
-        ArrayList<Integer> copy = original;
-        ArrayList<Integer> clone = (ArrayList<Integer>) original.clone();
+        SLinkedList<Integer> copy = original;
+        SLinkedList<Integer> clone = (SLinkedList<Integer>) original.clone();
 
         copy.add(20);   // copy에 20추가
         clone.add(30);  // clone에 30추가
@@ -18,11 +18,11 @@ public class Main{
 
         System.out.println("\ncopy list");
         for (int i=0; i<copy.size(); i++) {
-            System.out.println("index " + i + " data = " + original.get(i));
+            System.out.println("index " + i + " data = " + copy.get(i));
         }
 
         System.out.println("\nclone list");
-        for (int i=0; i< clone.size(); i++) {
+        for (int i=0; i<clone.size(); i++) {
             System.out.println("index " + i + " data = " + clone.get(i));
         }
 

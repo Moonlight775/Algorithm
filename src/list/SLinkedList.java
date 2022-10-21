@@ -4,7 +4,7 @@ import Interface_form.List;
 
 import java.util.NoSuchElementException;
 
-public class SLinkedList<E> implements List<E> {
+public class SLinkedList<E> implements List<E>, Cloneable {
 
     private Node<E> head;   // 노드의 첫 부분
     private Node<E> tail;   // 노드의 마지막 부분
@@ -276,6 +276,22 @@ public class SLinkedList<E> implements List<E> {
         }
         head = tail = null;
         size = 0;
+    }
+
+    public Object clone() throws CloneNotSupportedException {
+
+        @SuppressWarnings("unchecked")
+        SLinkedList<? super E> clone = (SLinkedList<? super E>) super.clone();
+
+        clone.head = null;
+        clone.tail = null;
+        clone.size = 0;
+
+        for (Node<E> x=head; x!=null; x=x.next) {
+            clone.addLast(x.data);
+        }
+
+        return clone;
     }
 
 }
