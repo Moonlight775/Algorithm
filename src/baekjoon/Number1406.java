@@ -3,66 +3,67 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
+import java.util.Stack;
+import java.util.StringTokenizer;
 
 public class Number1406 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String str = br.readLine();
-
-        ArrayList<Character> list = new ArrayList<>();
-
-        for (int i=0; i<str.length(); i++) {
-            list.add(str.charAt(i));
-        }
-
-        int index = list.size();
-
         int M = Integer.parseInt(br.readLine());
 
+        Stack<String> leftStack = new Stack<>();
+        Stack<String> rightStack = new Stack<>();
+
+        // 스택 초기화
+        for (int i=0; i<str.length(); i++) {
+            leftStack.push(String.valueOf(str.charAt(i)));
+        }
+
         for (int i=0; i<M; i++) {
-            String st = br.readLine();
-            char ch = st.charAt(0);
+            StringTokenizer st = new StringTokenizer(br.readLine());
 
-            switch (ch) {
-                case 'L' :
-                    if (index > 0) {
-                        index--;
-                    }
-                    else {
-                        index = 0;
+            switch (st.nextToken()) {
+                // 왼쪽으로 커서가 움직이듯 오른쪽 끝의 값을 rightStack에 push()
+                case "L" :
+                    if (!leftStack.isEmpty()) {
+                        rightStack.push(leftStack.pop());
                     }
                     break;
 
-                case 'D' :
-                    if (index >= list.size()) {
-                        index = list.size();
-                    }
-                    else {
-                        index++;
+                // 오른쪽으로 커서가 움직이듯 rightStack의 값을 leftStack에 push()
+                case "D" :
+                    if (!rightStack.isEmpty()) {
+                        leftStack.push(rightStack.pop());
                     }
                     break;
 
-                case 'B' :
-                    if (index > 0) {
-                        list.remove(index-1);
-                        index--;
+                // 커서 왼쪽에 값을 제거하는 것이므로 leftStack에 값을 pop()
+                case "B" :
+                    if (!leftStack.isEmpty()) {
+                        leftStack.pop();
                     }
                     break;
 
-                case 'P' :
-                    char c = st.charAt(2);
+                // 커서 왼쪽에 값을 추가하는 것이므로 leftStack에 값을 push()
+                case "P" :
+                    String S = st.nextToken();
 
-                    list.add(index, c);
-                    index++;
+                    leftStack.push(S);
                     break;
             }
         }
 
+        // leftStack 값들을 rightStack에 추가
+        while (!leftStack.isEmpty()) {
+            rightStack.push(leftStack.pop());
+        }
+
+        // rightStack 값들을 출력
         StringBuilder sb = new StringBuilder();
-        for (Character val : list) {
-            sb.append(val);
+        while (!rightStack.isEmpty()) {
+            sb.append(rightStack.pop());
         }
 
         System.out.println(sb);
