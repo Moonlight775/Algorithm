@@ -274,6 +274,48 @@ public class DLinkedList<E> implements List<E> {
             return true;
         }
     }
+
+    @Override
+    public E get(int index) {
+        return search(index).data;
+    }
+
+    @Override
+    public void set(int index, E value) {
+        Node<E> replaceNode = search(index);
+        replaceNode.data = null;
+        replaceNode.data = value;
+    }
+
+    @Override
+    public int indexOf(Object o) {  // 정방향 탐색
+        int index = 0;
+
+        for (Node<E> x=head; x!=null; x=x.next) {
+            if (o.equals(x.data)) {
+                return index;
+            }
+            index++;
+        }
+        return -1;
+    }
+
+    public int lastIndexOf(Object o) {  // 역방향 탐색
+        int index = size;
+
+        for (Node<E> x=tail; x!=null; x=x.prev) {
+            index--;
+            if (o.equals(x.data)) {
+                return index;
+            }
+        }
+        return -1;
+    }
+
+    @Override
+    public boolean contains(Object item) {
+        return indexOf(item) >= 0;
+    }
 }
 
 
