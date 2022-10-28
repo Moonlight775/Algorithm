@@ -316,6 +316,29 @@ public class DLinkedList<E> implements List<E> {
     public boolean contains(Object item) {
         return indexOf(item) >= 0;
     }
+
+    @Override
+    public int size() {
+        return size;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    @Override
+    public void clear() {
+        for (Node<E> x=head; x!=null;) {
+            Node<E> nextNode = x.next;
+            x.data = null;
+            x.next = null;
+            x.prev = null;
+            x = nextNode;
+        }
+        head = tail = null;
+        size = 0;
+    }
 }
 
 
