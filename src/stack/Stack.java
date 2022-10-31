@@ -3,6 +3,7 @@ package stack;
 import Interface_form.StackInterface;
 
 import java.util.Arrays;
+import java.util.EmptyStackException;
 
 public class Stack<E> implements StackInterface<E> {
 
@@ -51,4 +52,102 @@ public class Stack<E> implements StackInterface<E> {
             return;
         }
     }
+
+    @Override
+    public E push(E item) {
+        // 용적이 꽉 차있다면 용적을 재할당 해준다.
+        if (size == array.length) {
+            resize();
+        }
+
+        array[size] = item;     // 마지막 위치에 요소 추가
+        size++;
+
+        return item;
+    }
+
+    @Override
+    public E pop() {
+        // 만약 삭세할 요소가 없다면 Stack이 비어있다는 의미이므로 예외 발생시키기
+        if (size == 0) {
+            throw new EmptyStackException();
+        }
+
+        @SuppressWarnings("unchecked")
+        E obj = (E) array[size - 1];    // 삭제될 요소를 반환하기 위한 임시 변수
+
+        array[size - 1] = null; // 요소 삭제
+
+        size--; // 사이즈 1 감소
+        resize();   // 용적 재할당
+
+        return obj;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
