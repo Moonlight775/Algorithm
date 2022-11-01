@@ -83,6 +83,60 @@ public class Stack<E> implements StackInterface<E> {
 
         return obj;
     }
+
+    @SuppressWarnings("unchecked")
+    @Override
+    public E peek() {
+        // 만약 삭제할 요소가 없다면 Stack이 비어있다는 의미이므로 예외 발생시키기
+        if (size == 0) {
+            throw new EmptyStackException();
+        }
+
+        return (E) array[size - 1];
+    }
+
+    @Override
+    public int search(Object value) {
+        // value가 null일 때는 equals(null)이 되어 NullPointerException이 발생할 수 있으니,
+        // == 로 null 값을 비교해준다.
+        if (value == null) {
+            for (int idx=size-1; idx>=0; idx--) {
+                if (array[idx] == null) {
+                    return size - idx;
+                }
+            }
+        }
+        else {
+            for (int idx=size-1; idx>=0; idx--) {
+                // 같은 객체를 찾았을 경우 size - idx 값을 반환
+                if (array[idx].equals(value)) {
+                    return size - idx;
+                }
+            }
+        }
+        return -1;
+    }
+
+    @Override
+    public int size() {
+        return size;
+    }
+
+    @Override
+    public void clear() {
+        // 저장되어있던 모든 요소를 null 처리 해준다.
+        for (int i=0; i<size; i++) {
+            array[i] = null;
+        }
+
+        size = 0;
+        resize();
+    }
+
+    @Override
+    public boolean empty() {
+        return size == 0;
+    }
 }
 
 
