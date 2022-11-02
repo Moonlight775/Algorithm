@@ -1,7 +1,5 @@
 package stack;
 
-import java.util.Comparator;
-
 public class StackTest {
     public static void main(String[] args) {
         Stack<Student> stack = new Stack<>();
@@ -11,23 +9,16 @@ public class StackTest {
         stack.push(new Student("최신숙", 99));
         stack.push(new Student("최동하", 66));
 
-        stack.sort(customComp); // Comparator를 넘겨준다.
+        stack.sort(); // Comparator 인자가 필요하지 않음
 
         for (Object a : stack.toArray()) {
             System.out.println(a);
         }
     }
 
-    // 사용자 설정 comparator(비교기)
-    static Comparator<Student> customComp = new Comparator<Student>() {
-        @Override
-        public int compare(Student o1, Student o2) {
-            return o2.score - o1.score;
-        }
-    };
 }
 
-class Student {
+class Student implements Comparable<Student>{
     String name;
     int score;
 
@@ -38,5 +29,10 @@ class Student {
 
     public String toString() {
         return "이름 : " + name + "\t성적 : " + score;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return o.score - this.score;
     }
 }
