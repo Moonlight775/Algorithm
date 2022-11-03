@@ -1,7 +1,7 @@
 package Interface_form;
 
 /*
-* 자바 Queu Interface
+* 자바 Queue Interface
 * Queue는 ArrayQueue, LinkedQueue,
 * Deque, PriorityQueue에 의해 구현됩니다.
 *
