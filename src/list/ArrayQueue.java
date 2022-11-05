@@ -27,4 +27,27 @@ public class ArrayQueue<E> implements Queue<E> {
         this.front = 0;
         this.rear = 0;
     }
+
+    private void resize(int newCapacity) {
+
+        int arrayCapacity = array.length;   // 현재 용적 크기
+
+        Object[] newArray = new Object[newCapacity];    // 용적을 변경한 배열
+
+        /*
+        * i = new array index
+        * j = original array
+        * index 요소 개수(size)만큼 새 배열에 값 복사
+        * */
+        for (int i=1, j=front+1; i<=size; i++, j++) {
+            newArray[i] = array[j % arrayCapacity];
+        }
+
+        this.array = null;
+        this.array = newArray;  // 새 배열을 기존 array의 배열로 덮어씌움
+
+        front = 0;
+        rear = size;
+    }
+
 }
