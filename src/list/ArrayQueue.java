@@ -50,4 +50,20 @@ public class ArrayQueue<E> implements Queue<E> {
         rear = size;
     }
 
+    @Override
+    public boolean offer(E item) {
+
+        // 용적이 가득 찼을 경우
+        if ((rear + 1) % array.length == front) {
+            resize(array.length * 2);   // 용적을 두 배 늘려준다.
+        }
+
+        rear = (rear + 1) % array.length;   // rear를 rear의 다음 위치로 갱신
+
+        array[rear] = item;
+        size++; // 사이즈 1 증가
+
+        return true;
+    }
+
 }
