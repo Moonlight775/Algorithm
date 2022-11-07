@@ -125,6 +125,39 @@ public class ArrayQueue<E> implements Queue<E> {
         return item;
     }
 
+    public int size() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public boolean contains(Object value) {
+
+        int start = (front + 1) % array.length;
+
+        /*
+        * i : 요소 개수만큼만 반복한다.
+        * idx : 원소 위치로, 매 회 (idx + 1) % array.length; 의 위치로 갱신
+        * */
+        for (int i=0, idx=start; i<size; i++, idx=(idx+1)%array.length) {
+            if (array[idx].equals(value)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void clear() {
+
+        for (int i=0; i<array.length; i++) {
+            array[i] = null;
+        }
+
+        front = rear = size = 0;
+    }
+
 }
 
 
