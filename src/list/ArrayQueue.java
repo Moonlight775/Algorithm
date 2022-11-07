@@ -102,6 +102,29 @@ public class ArrayQueue<E> implements Queue<E> {
         return item;
     }
 
+    @Override
+    public E peek() {
+
+        // 요소가 없을 경우 null 반환
+        if (size == 0) {
+            return null;
+        }
+
+        @SuppressWarnings("unchecked")
+        E item = (E) array[(front + 1) % array.length];
+        return item;
+    }
+
+    public E element() {
+
+        E item = peek();
+
+        if (item == null) {
+            throw new NoSuchElementException();
+        }
+        return item;
+    }
+
 }
 
 
