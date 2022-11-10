@@ -5,7 +5,7 @@ import Interface_form.Queue;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
-public class ArrayQueue<E> implements Queue<E> {
+public class ArrayQueue<E> implements Queue<E>, Cloneable {
 
     private static final int DEFAULT_CAPACITY = 64; // 최소(기본) 용적 크기
 
@@ -231,6 +231,23 @@ public class ArrayQueue<E> implements Queue<E> {
         }
 
         return a;
+    }
+
+    @Override
+    public Object clone() {
+
+        // super.clone()은 CloneNotSupportedException 예외를 처리해주어야한다.
+        try {
+            @SuppressWarnings("unchecked")
+            ArrayQueue<E> clone = (ArrayQueue<E>) super.clone(); // 새로운 큐 객체 생성
+
+            // 새로운 큐의 배열도 생성해주어야 함 (내부 객체는 깊은 복사가 되지 않기 때문)
+            clone.array = Arrays.copyOf(array, array.length);
+            return clone;
+        }
+        catch (CloneNotSupportedException e) {
+            throw new Error(e); // 예외처리는 자유롭게 구성
+        }
     }
 
 }
