@@ -1,4 +1,4 @@
-package list;
+package queue;
 
 import Interface_form.Queue;
 
