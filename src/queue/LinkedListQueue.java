@@ -13,4 +13,24 @@ public class LinkedListQueue<E> implements Queue<E> {
         this.tail = null;
         this.size = 0;
     }
+
+    @Override
+    public boolean offer(E value) {
+        Node<E> newNode = new Node<E>(value);
+
+        // 비어있을 경우
+        if (size == 0) {
+            head = newNode;
+        }
+        // 그 외의 경우 마지막 노드(tail)의 다음 노드(next)가 새 노드를 가리키도록 한다.
+        else {
+            tail.next = newNode;
+        }
+
+        // tail이 가리키는 노드를 새 노드로 바꿔준다.
+        tail = newNode;
+        size++;
+
+        return true;
+    }
 }
