@@ -71,4 +71,23 @@ public class LinkedListQueue<E> implements Queue<E> {
         return element;
     }
 
+    @Override
+    public E peek() {
+        // 요소가 없을 경우 null 반환
+        if (size == 0) {
+            return null;
+        }
+        return head.data;
+    }
+
+    public E element() {
+        E element = peek();
+
+        if (element == null) {
+            throw new NoSuchElementException();
+        }
+
+        return element;
+    }
+
 }
