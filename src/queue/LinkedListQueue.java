@@ -90,4 +90,85 @@ public class LinkedListQueue<E> implements Queue<E> {
         return element;
     }
 
+    public int size() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public boolean contains(Object value) {
+        // head 데이터부터 x가 null이 될때까지 value랑 x의 데이터(x.data)랑
+        // 같은지를 비교하고 같을 경우 true를 반환
+        for (Node<E> x=head; x!=null; x=x.next) {
+            if (value.equals(x.data)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void clear() {
+        for (Node<E> x=head; x!=null; ) {
+            Node<E> next = x.next;
+            x.data = null;
+            x.next = null;
+            x= next;
+        }
+
+        size = 0;
+        head = tail = null;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
