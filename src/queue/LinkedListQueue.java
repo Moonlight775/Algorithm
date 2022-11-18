@@ -121,6 +121,31 @@ public class LinkedListQueue<E> implements Queue<E> {
         head = tail = null;
     }
 
+    public Object[] toArray() {
+        Object[] array = new Object[size];
+        int idx = 0;
+        for (Node<E> x=head; x!=null; x=x.next) {
+            array[idx++] = (E) x.data;
+        }
+        return array;
+    }
+
+    @SuppressWarnings("unchecked")
+    public <T> T[] toArray(T[] a) {
+        if (a.length < size) {
+            // Array.newInstance(컴포넌트 타입, 생성할 크기)
+            a = (T[]) java.lang.reflect.Array.newInstance(a.getClass().getComponentType(), size);
+        }
+
+        int i = 0;
+        // 얕은 복사를 위한 s 배열
+        Object[] result = a;
+        for (Node<E> x = head; x!=null; x=x.next) {
+            result[i++] = x.data;
+        }
+        return a;
+    }
+
 }
 
 
