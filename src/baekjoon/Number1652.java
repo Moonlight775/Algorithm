@@ -10,7 +10,7 @@ public class Number1652 {
 
         int N = Integer.parseInt(br.readLine());
 
-        char[][] room = new char[N][N];
+        char[][] room = new char[N+1][N+1];
 
         // 2차원 배열 초기화
         for (int i=0; i<N; i++) {
@@ -18,36 +18,26 @@ public class Number1652 {
             for (int j=0; j<N; j++) {
                 room[i][j] = str.charAt(j);
             }
+            // N번째 줄(벽)을 짐으로 표현
+            room[i][N] = 'X';
+            room[N][i] = 'X';
         }
+
 
         int row = 0;    // 가로로 누울 수 있는 자리 수
         int col = 0;    // 세로로 누울 수 있는 자리 수
 
         for (int i=0; i<N; i++) {
-            int check_h = 0;
-            int check_v = 0;
-
             for (int j=0; j<N-1; j++) {
                 // 가로 확인
-                if (room[i][j] == '.') {
-                    check_h++;
-                }
-                if (room[i][j] == 'X' || j == N-1) {
-                    if (check_h > 1) row++;
-
-                    check_h = 0;
+                if (room[i][j] == '.' && room[i][j+1] == '.' && room[i][j+2] == 'X') {
+                    row++;
                 }
 
                 // 세로 확인
-                if (room[j][i] == '.') {
-                    check_v++;
+                if (room[j][i] =='.' && room[j+1][i] =='.' && room[j+2][i] == 'X') {
+                    col++;
                 }
-                if (room[j][i] == 'X' || j == N-1) {
-                    if (check_v > 1) col++;
-
-                    check_v = 0;
-                }
-
             }
         }
 
