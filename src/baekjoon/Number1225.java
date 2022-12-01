@@ -10,25 +10,22 @@ public class Number1225 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        String A = st.nextToken();
-        String B = st.nextToken();  // B의 자릿수를 알기 위해 String으로 받는다
+        // A와 B의 수를 각자 char 배열에 담음
+        char[] A = st.nextToken().toCharArray();
+        char[] B = st.nextToken().toCharArray();
 
-        int[] arr = new int[B.length()];    // A에 B를 반복해서 곱해주어야 하므로 배열에 저장
+        long sumOfA = 0; // A의 모든 자리 수의 합
+        long sumOfB = 0; // B의 모든 자리 수의 합
 
-        for (int i=0; i<arr.length; i++) {
-            arr[i] = B.charAt(i) - '0';
+        for (int i=0; i<A.length; i++) {
+            sumOfA += A[i] - '0';
         }
 
-        int result = 0; // 곱셈 결과
-
-        for (int i=0; i<A.length(); i++) {
-            int pieceOfA = A.charAt(i) - '0';
-
-            for (int j=0; j<arr.length; j++) {
-                result += pieceOfA * arr[j];
-            }
+        for (int i=0; i<B.length; i++) {
+            sumOfB += B[i] - '0';
         }
 
-        System.out.println(result);
+        // A와 B의 각자 자리 수의 합을 곱하면 각각 곱할 필요 없이 곱셈 결과가 나옴
+        System.out.println(sumOfA * sumOfB);
     }
 }
