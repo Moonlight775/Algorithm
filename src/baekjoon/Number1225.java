@@ -17,12 +17,12 @@ public class Number1225 {
         long sumOfA = 0; // A의 모든 자리 수의 합
         long sumOfB = 0; // B의 모든 자리 수의 합
 
-        for (int i=0; i<A.length; i++) {
-            sumOfA += A[i] - '0';
+        for (char c : A) {
+            sumOfA += c - '0';
         }
 
-        for (int i=0; i<B.length; i++) {
-            sumOfB += B[i] - '0';
+        for (char c : B) {
+            sumOfB += c - '0';
         }
 
         // A와 B의 각자 자리 수의 합을 곱하면 각각 곱할 필요 없이 곱셈 결과가 나옴
