@@ -21,20 +21,13 @@ public class Number1940 {
         }
 
         int count = 0;
-        int start = 0;
-        int end = 0;
-        int sum = 0;
 
-        while (end < N) {
-            if (sum >= M) {
-                sum -= arr[start++];
-            }
-            else {
-                sum += arr[end++];
-            }
-
-            if (sum == M) {
-                count++;
+        for (int i=0; i<N-1; i++) {
+            for (int j=i+1; j<N; j++) {
+                // 두 재료의 합이 M과 같다면 +1
+                if (arr[i]+arr[j] == M) {
+                    count++;
+                }
             }
         }
 
