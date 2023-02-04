@@ -23,24 +23,31 @@ public class Number1059 {
 
         int n = Integer.parseInt(br.readLine());    // 집합에 포함된 정수
 
-        int index = 0;  // n을 포함한 구간을 찾기 위한 인덱스 번호
+        int start = 0;  // n과 근접한 작은 값
+        int end = 1000; // n과 근접한 큰 값
 
-        // 인덱스 번호 찾기
-        for (int i=0; i<L; i++) {
-            if (arr[i] >= n) {
-                index = i;
-                break;
+        // n과 근접한 값을 찾기
+        for (int val : arr) {
+            if (val < n) {
+                if (val > start) {
+                    start = val;
+                }
+            }
+            else if (val > n) {
+                if (val < end) {
+                    end = val;
+                }
+            }
+            else {  // n과 같은 값이라면 0 출력
+                System.out.println(0);
+                return;
             }
         }
 
-        if (arr[index] == n) {
-            System.out.println(0);
-            return;
-        }
-
-        int A = arr[index-1]+1;
-        int B = arr[index]-1;
-
-        System.out.println((n-A+1)*(B-n+1)-1);
+        // 직접 좋은 구간을 써보면 쉽게 규칙을 찾을 수 있다.
+        // n-start를 이해하기 위해 예시2를 보면 [9, ~], [10, ~] 부분과 같다.
+        // end-n 은 [~, 10],[~, 11].[~, 12] 부분이다.
+        // 이 중 [n, n]은 제외해야 하므로 -1을 해준다.
+        System.out.println(((n-start)*(end-n))-1);
     }
 }
