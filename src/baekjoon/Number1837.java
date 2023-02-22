@@ -4,14 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Number1837 {
 
-    static ArrayList<Integer> prime = new ArrayList<>();
-    static BigInteger val;
-    static boolean flag = false;
+    static boolean[] prime;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,28 +17,26 @@ public class Number1837 {
         BigInteger P = new BigInteger(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
 
+        prime = new boolean[K+1];
+
         // K 이하의 소수 찾기
         for (int i=2; i<=K; i++) {
             make_prime(i);
         }
 
-        for (int i=0; i<prime.size(); i++) {
-            val = BigInteger.valueOf(prime.get(i));
-            BigInteger remain = P.mod(val);
-            long int_remian = remain.longValue();
+        for (int i=2; i<K; i++) {
+            if(!prime[i]) continue; // 소수가 아니라면 스킵
 
-            if (int_remian == 0) {
-                flag = true;
-                break;
+            BigInteger val = new BigInteger(Integer.toString(i));
+            // P와 K 이하의 소수를 나눴을 때 나누어떨어진다면 좋지 않은 암호
+            // BigInteger - compareTo는 비교 값이 동일하면 0 반환
+            if (P.mod(val).compareTo(BigInteger.ZERO) == 0) {
+                System.out.println("BAD " + val);
+                return;
             }
         }
 
-        if (flag) {
-            System.out.printf("%S %d", "BAD", val);
-        }
-        else {
-            System.out.println("GOOD");
-        }
+        System.out.println("GOOD");
     }
 
     // 소수 찾는 메서드
@@ -51,6 +46,7 @@ public class Number1837 {
                 return;
             }
         }
-        prime.add(num);
+
+        prime[num] = true;  // 소수라면 true
     }
 }
