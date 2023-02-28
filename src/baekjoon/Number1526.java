@@ -7,12 +7,22 @@ public class Number1526 {
         Scanner sc = new Scanner(System.in);
 
         int N = sc.nextInt();
-        String regExp = "^[4,7]+$"; // 4와 7만 해당하는 값을 찾도록 정규식 생성
 
         for (int i = N; i >= 4; i--) {
-            String str = String.valueOf(i);
+            boolean flag = true;
+            int num = i;
 
-            if (str.matches(regExp)) {
+            while (num != 0) {
+                if (num % 10 == 4 || num % 10 == 7) {
+                    num /= 10;
+                }
+                else {
+                    flag = false;
+                    break;
+                }
+            }
+
+            if (flag) {
                 System.out.println(i);
                 return;
             }
