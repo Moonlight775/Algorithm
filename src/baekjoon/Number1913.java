@@ -12,50 +12,51 @@ public class Number1913 {
         int num = Integer.parseInt(br.readLine());
 
         int[][] arr = new int[N][N];
-        int number = 1;
 
         int row = N / 2;
         int col = N / 2;
+        int number = 1;
+        arr[col][row] = 1;
 
-        int end = 1;
-
-        while (true) {
-            for (int i = 0; i < end; i++) {
-                arr[col--][row] = number++;
+        for (int i = 1; i < N; i++) {
+            for (int j = 0; j < i; j++) {
+                if (i % 2 == 1) {
+                    arr[--col][row] = ++number;
+                } else {
+                    arr[++col][row] = ++number;
+                }
             }
 
-            if (number-1 == N*N) break;
-
-            for (int i = 0; i < end; i++) {
-                arr[col][row++] = number++;
+            for (int j = 0; j < i; j++) {
+                if (i % 2 == 1) {
+                    arr[col][++row] = ++number;
+                } else {
+                    arr[col][--row] = ++number;
+                }
             }
-            end++;
-
-            for (int i = 0; i < end; i++) {
-                arr[col++][row] = number++;
-            }
-            for (int i = 0; i < end; i++) {
-                arr[col][row--] = number++;
-            }
-            end++;
         }
 
-        StringBuilder sb = new StringBuilder();
-        int index_row = 0;
-        int index_col = 0;
+        for (int i = N - 1; i < N; i++) {
+            for (int j = 0; j < i; j++) {
+                arr[--col][row] = ++number;
+            }
+        }
 
+        int index_col = 0;
+        int index_row = 0;
+
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                sb.append(arr[i][j]).append(" ");
                 if (arr[i][j] == num) {
-                    index_row = j+1;
                     index_col = i+1;
+                    index_row = j+1;
                 }
+                sb.append(arr[i][j]).append(" ");
             }
             sb.append('\n');
         }
-
         sb.append(index_col).append(" ").append(index_row);
-        System.out.println(sb);
+        System.out.print(sb);
     }
 }
