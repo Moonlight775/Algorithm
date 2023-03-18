@@ -3,32 +3,28 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 public class Number10798 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        ArrayList<String> list = new ArrayList<>();
+        char[][] str = new char[5][15];
         int max = 0;    // 가장 긴 문자열
 
-        // 리스트 초기화 및 최대 길이 문자열 찾기
+        // 문자열 초기화 및 max값 찾기
         for (int i = 0; i < 5; i++) {
-            list.add(br.readLine());
-            max = Math.max(max, list.get(i).length());
+            String S = br.readLine();
+            max = Math.max(max, S.length());
+            for (int j = 0; j < S.length(); j++) {
+                str[i][j] = S.charAt(j);
+            }
         }
 
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < max; i++) {
-            // 다 출력한 리스트는 제거
-            for (int k = 0; k < list.size(); k++) {
-                if (i == list.get(k).length()) {
-                    list.remove(k);
-                }
-            }
-
-            for (String s : list) {
-                sb.append(s.charAt(i));
+            for (int j = 0; j < 5; j++) {
+                if (str[j][i] == '\0') continue;    // char 초기값이면 스킵
+                sb.append(str[j][i]);
             }
         }
 
