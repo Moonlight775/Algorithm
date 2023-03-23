@@ -3,7 +3,6 @@ package chap10;
 import java.util.Comparator;
 
 public class BinTree<K, V> {
-
     // 노드
     static class Node<K, V> {
         private K key;              // 키 값
@@ -37,4 +36,15 @@ public class BinTree<K, V> {
 
     private Node<K, V> root;    // 루트
     private Comparator<? super K> comparator = null;    // 비교자
+
+    // 생성자
+    public BinTree() {
+        root = null;
+    }
+
+    // 생성자
+    public BinTree(Comparator<? super K> c) {
+        this();
+        comparator = c;
+    }
 }
