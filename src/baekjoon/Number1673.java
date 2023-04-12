@@ -8,27 +8,28 @@ import java.util.StringTokenizer;
 public class Number1673 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
-        while(true){
+        while (true) {
             String input = br.readLine();
 
             if (input == null) break;
 
             StringTokenizer st = new StringTokenizer(input);
+            int n = Integer.parseInt(st.nextToken());   // 치킨 쿠폰
+            int k = Integer.parseInt(st.nextToken());   // 도장 개수
 
-            int n = Integer.parseInt(st.nextToken());
-            int k = Integer.parseInt(st.nextToken());
+            int count = 0;
+            count += n;
 
-            int count = n;
-            int mok = n / k;
-            count += mok;
-
-            if (mok > 0) {
-                mok /= k;
-                count += mok;
+            while (n >= k) {
+                n /= k;
+                count += n;
             }
 
-            System.out.println(count);
+            sb.append(count).append('\n');
         }
+
+        System.out.println(sb);
     }
 }
