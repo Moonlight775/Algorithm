@@ -8,7 +8,6 @@ import java.util.StringTokenizer;
 public class Number1673 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
 
         while (true) {
             String input = br.readLine();
@@ -19,17 +18,24 @@ public class Number1673 {
             int n = Integer.parseInt(st.nextToken());   // 치킨 쿠폰
             int k = Integer.parseInt(st.nextToken());   // 도장 개수
 
-            int count = 0;
-            count += n;
+            int count = 0;  // 치킨 개수
+            int coupon;
+            int newCount;
 
-            while (n >= k) {
-                n /= k;
-                count += n;
+            while (true) {
+                newCount = (n - n % k);
+                coupon = newCount / k;
+                n = n % k;
+                n += coupon;
+                count += newCount;
+
+                if (n < k) {
+                    count += n;
+                    break;
+                }
             }
 
-            sb.append(count).append('\n');
+            System.out.println(count);
         }
-
-        System.out.println(sb);
     }
 }
