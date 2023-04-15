@@ -11,17 +11,13 @@ public class Number2523 {
 
         // 중간 위 별 그리기
         for (int i = 1; i <= N; i++) {
-            for (int j = 0; j < i; j++) {
-                sb.append("*");
-            }
+            sb.append("*".repeat(i));
             sb.append('\n');
         }
 
         // 아래 별 그리기
         for (int i = 1; i <= N; i++) {
-            for (int j = 0; j < N - i; j++) {
-                sb.append("*");
-            }
+            sb.append("*".repeat(N - i));
             sb.append('\n');
         }
 
