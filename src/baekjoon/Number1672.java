@@ -21,15 +21,21 @@ public class Number1672 {
         String str = br.readLine();
         int length = str.length();
 
-        for (int i = length - 1; i > 0; i--) {
-            int row = getNum(str.charAt(i - 1));    // 행
-            int col = getNum(str.charAt(i));        // 열
-
-            str = str.substring(0, i-1);
-            str += chart[row][col];
+        if (length == 1) {
+            System.out.println(str);
+            return;
         }
 
-        System.out.println(str);
+        char chart_ch = chart[getNum(str.charAt(N-1))][getNum(str.charAt(N-2))];
+
+        for (int i = length - 2; i > 0; i--) {
+            int row = getNum(str.charAt(i - 1));    // 행
+            int col = getNum(chart_ch);        // 열
+
+            chart_ch = chart[row][col];
+        }
+
+        System.out.println(chart_ch);
     }
 
     // 행과 열의 위치를 알기 위한 메소드
