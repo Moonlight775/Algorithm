@@ -3,7 +3,6 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashSet;
 import java.util.StringTokenizer;
 
 public class Number1773 {
@@ -13,20 +12,26 @@ public class Number1773 {
 
         int N = Integer.parseInt(st.nextToken());   // 학생의 수
         int C = Integer.parseInt(st.nextToken());   // 폭죽쇼가 끝나는 시간
+        int[] student = new int[N];     // 학생들이 폭죽을 터뜨리는 주기 배열
 
-        HashSet<Integer> set = new HashSet<>();     // 같은 시간에 중복으로 터지는 폭죽을 제외하기 위해 Set 사용
-
+        // 배열 초기화
         for (int i = 0; i < N; i++) {
-            int num = Integer.parseInt(br.readLine());
-            int repeat = 1; // 곱하기
+            student[i] = Integer.parseInt(br.readLine());
+        }
 
-            // C시간 전까지 터지는 폭죽을 Set 에 추가
-            while (num*repeat <= C) {
-                set.add(num * repeat);
-                repeat++;
+        int count = 0;  // 폭죽 터지는 횟수
+
+        for (int i = 1; i <= C; i++) {
+            for (int j = 0; j < N; j++) {
+                // 나머지가 0일 때가 폭죽을 볼 수 있을 때
+                // 중복되지 않게 카운트 후 다음 초로 갈 수 있도록 break 설정
+                if (i % student[j] == 0) {
+                    count++;
+                    break;
+                }
             }
         }
 
-        System.out.println(set.size());
+        System.out.println(count);
     }
 }
