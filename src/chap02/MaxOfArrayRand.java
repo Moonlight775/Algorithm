@@ -2,9 +2,10 @@ package chap02;
 
 import java.util.Random;
 import java.util.Scanner;
+// 배열 요소의 최댓값을 나타낸다(값을 난수로 생성).
 
 public class MaxOfArrayRand {
-    // 배열 a의 최댓값을 구하여 반환합니다.
+    // 배열 a의 최댓값을 구하여 반환
     static int maxOf(int[] a) {
         int max = a[0];
         for (int i =1; i < a.length; i++){
@@ -30,7 +31,7 @@ public class MaxOfArrayRand {
             height[i] = 100 + rand.nextInt(90); // 요소의 값을 난수로 결정
             System.out.println("height[" + i + "] : " + height[i]);
         }
-        System.out.println("최댓값은 " + maxOf(height) + "입니다.");
 
+        System.out.println("최댓값은 " + maxOf(height) + "입니다.");
     }
 }

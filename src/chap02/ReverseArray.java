@@ -1,6 +1,7 @@
 package chap02;
 
 import java.util.Scanner;
+// 배열 요소에 값을 읽어 들여 역순으로 정렬한다.
 
 public class ReverseArray {
     // 배열 요소 a[idx1]과 a[idx2]의 값을 바꿈
@@ -10,7 +11,7 @@ public class ReverseArray {
         a[idx2] = t;
     }
 
-    // 배열 adml dythfmf durtnsdmfh wjdfuf
+    // 배열 a의 요소를 역순으로 정렬
     static void reverse(int[] a) {
         for (int i = 0; i < a.length /2; i++) {
             swap(a, i, a.length -i-1);
