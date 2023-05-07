@@ -1,5 +1,5 @@
 package chap02;
-// 1,000 이하의 소수를 열거
+// 1,000 이하의 소수를 열거(버전 2)
 
 public class PrimeNumber2 {
     public static void main(String[] args) {
@@ -9,11 +9,11 @@ public class PrimeNumber2 {
 
         prime[ptr++] = 2;                   // 2는 소수
 
-        for (int n=3; n <= 1000; n +=2) {   // 대상은 홀수만
+        for (int n = 3; n <= 1000; n += 2) {   // 대상은 홀수만
             int i;
-            for (i=1; i<ptr; i++) {         // 이미 찾은 소수로 나누어 봄
+            for (i = 1; i < ptr; i++) {         // 이미 찾은 소수로 나누어 봄
                 counter++;
-                if (n%prime[i] == 0)        // 나누어떨어지면 소수가 아님
+                if (n % prime[i] == 0)        // 나누어떨어지면 소수가 아님
                     break;                  // 더 이상의 반복은 불필요
             }
             if (ptr == i)                   // 마지막까지 나누어 떨어지지 않음
