@@ -23,8 +23,8 @@ public class PhysicalExamination {
     static double aveHeight(PhyscData[] dat) {
         double sum = 0;
 
-        for (int i = 0; i < dat.length; i++) {
-            sum += dat[i].height;
+        for (PhyscData physcData : dat) {
+            sum += physcData.height;
         }
 
         return sum / dat.length;
@@ -59,8 +59,8 @@ public class PhysicalExamination {
         System.out.println("이름       키   시력");
         System.out.println("--------------------");
 
-        for (int i = 0; i < x.length; i++) {
-            System.out.printf("%-8s%3d%5.1f\n", x[i].name, x[i].height, x[i].vision);
+        for (PhyscData physcData : x) {
+            System.out.printf("%-8s%3d%5.1f\n", physcData.name, physcData.height, physcData.vision);
         }
 
         System.out.printf("\n평균 키 : %5.1fcm\n", aveHeight(x));
