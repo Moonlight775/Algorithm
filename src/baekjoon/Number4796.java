@@ -28,11 +28,10 @@ public class Number4796 {
             rest  = V % P;
 
             result = L * multi;     // 사용가능한 일 수 x 배수의 값은 무조건 사용할 수 있다.
-            if (rest > L) {         // 나머지 일 수가 L보다 크다면 L이 최대로 사용할 수 있는 일이다.
-                result += L;
-            } else {                // L보다 작다면 나머지에 해당하는 일만 사용하므로 결과값에 나머지만큼만 더해준다.
-                result += rest;
-            }
+
+            // 나머지 일보다 L이 작다면 L만큼
+            // L보다 나머지 일이 작다면 나머지 일만큼 캠핑 가능
+            result += Math.min(rest, L);
 
             sb.append("Case ").append(index).append(": ").append(result).append('\n');
 
