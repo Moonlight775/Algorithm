@@ -28,4 +28,38 @@ public class IntQueue {
             max = 0;
         }
     }
+
+    // 큐에 데이터를 인큐
+    public int enque(int x) throws OverflowIntQueueException {
+        if (num >= max) {
+            throw new OverflowIntQueueException();      // 큐가 가득 참
+        }
+
+        que[rear++] = x;
+        num++;
+
+        if (rear == max) {
+            rear = 0;
+        }
+
+        return x;
+    }
+
+    // 큐에서 데이터를 디큐
+    public int deque() throws EmptyIntQueueException {
+        if (num <= 0) {
+            throw new EmptyIntQueueException();     // 큐가 비어 있음
+        }
+
+        int x = que[front++];
+        num--;
+
+        if (front == max) {
+            front = 0;
+        }
+
+        return x;
+    }
+
+
 }
