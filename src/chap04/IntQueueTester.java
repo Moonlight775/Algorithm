@@ -10,7 +10,7 @@ public class IntQueueTester {
 
         while (true) {
             System.out.println("현재 데이터 수 : " + s.size() + " / " + s.capacity());
-            System.out.print("(1)인큐 (2)디큐 (3)피크 (4)덤프 (0)종료 : ");
+            System.out.print("(1)인큐 (2)디큐 (3)피크 (4)덤프 (5)검색 (0)종료 : ");
 
             int menu = stdIn.nextInt();
             if (menu == 0) break;
@@ -48,6 +48,20 @@ public class IntQueueTester {
                 case 4:     // 덤프
                     s.dump();
                     break;
+
+                case 5:
+                    System.out.print("찾을 데이터 : ");
+                    x = stdIn.nextInt();
+                    try {
+                        int result = s.search(x);
+                        if (result == 0) {
+                            System.out.println("검색한 데이터가 없습니다.");
+                        } else {
+                            System.out.println("검색한 데이터는 " + result + "번째에 있습니다.");
+                        }
+                    } catch (IntQueue.EmptyIntQueueException e) {
+                        System.out.println("큐가 비어 있습니다.");
+                    }
             }
         }
     }
