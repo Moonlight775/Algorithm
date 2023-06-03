@@ -83,6 +83,17 @@ public class IntQueue {
         return -1;                  // 검색 실패
     }
 
+    // 큐에서 x를 검색하여 큐 안에서 몇 번째에 있는가를 양수로 반환
+    public int search(int x) {
+        for (int i = 0; i < num; i++) {
+            if (que[(i + front) % max] == x) {
+                return i + 1;
+            }
+        }
+
+        return 0;                   // 검색 실패
+    }
+
     // 큐를 비움
     public void clear() {
         num = front = rear = 0;
