@@ -111,4 +111,64 @@ public class IntDeque {
         return result;
     }
 
+    // 덱에서 x를 검색하여 인덱스(찾지 못하면 -1)를 반환
+    public int indexOf(int x) {
+        for (int i = 0; i < num; i++) {
+            int idx = (i + front) % max;
+
+            if (que[idx] == x) {    // 검색 성공
+                return idx;
+            }
+        }
+
+        return -1;      // 검색 실패
+    }
+
+    // 덱에서 x를 검색하여 머리부터 몇 번째인가(찾지 못하면 0)를 반환
+    public int search(int x) {
+        for (int i = 0; i < num; i++) {
+            if (que[(i + front) % max] == x) {  // 검색 성공
+                return i + 1;
+            }
+        }
+
+        return 0;       // 검색 실패
+    }
+
+    // 덱을 비움
+    public void clear() {
+        num = front = rear = 0;
+    }
+
+    // 덱의 용량을 반환
+    public int capacity() {
+        return max;
+    }
+
+    // 덱에 쌓여 있는 데이터 수를 반환
+    public int size() {
+        return num;
+    }
+
+    // 덱이 비어 있는가?
+    public boolean isEmpty() {
+        return num <= 0;
+    }
+
+    // 덱이 가득 찼는가?
+    public boolean isFull() {
+        return num >= max;
+    }
+
+    // 덱 내의 데이터를 머리 -> 꼬리 순으로 출력
+    public void dump() {
+        if (num <= 0) {
+            System.out.println("덱이 비어 있습니다.");
+        } else {
+            for (int i = 0; i < num; i++) {
+                System.out.print(que[(i + front) % max] + " ");
+            }
+            System.out.println();
+        }
+    }
 }
