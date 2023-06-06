@@ -60,6 +60,55 @@ public class IntDeque {
         return x;
     }
 
+    // 덱에서 데이터를 머리쪽부터 디큐
+    public int dequeFront() throws EmptyIntDequeException {
+        if (num <= 0) {
+            throw new EmptyIntDequeException();     // 덱이 비어 있음
+        }
 
+        int x = que[front++];
+        num--;
+
+        if (front == max) {
+            front = 0;
+        }
+
+        return x;
+    }
+
+    // 덱에서 데이터를 꼬리쪽부터 디큐
+    public int dequeRear() throws EmptyIntDequeException {
+        if (num <= 0) {
+            throw new EmptyIntDequeException();     // 덱이 비어 있음
+        }
+
+        num--;
+
+        if (--rear < 0) {
+            rear = max - 1;
+        }
+
+        return que[rear];
+    }
+
+    // 덱의 머리 데이터를 피크
+    public int peekFront() throws EmptyIntDequeException {
+        if (num <= 0) {
+            throw new EmptyIntDequeException();     // 덱이 비어 있음
+        }
+
+        return que[front];
+    }
+
+    // 덱의 꼬리 데이터를 피크
+    public int peekRear() throws EmptyIntDequeException {
+        if (num <= 0) {
+            throw new EmptyIntDequeException();     // 덱이 비어 있음
+        }
+
+        int result = rear - 1 < 0 ? max - 1 : rear - 1;
+
+        return result;
+    }
 
 }
