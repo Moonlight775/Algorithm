@@ -10,7 +10,7 @@ public class Number8595 {
 
         int n = Integer.parseInt(br.readLine());    // 단어의 길이
         char[] word = br.readLine().toCharArray();
-        int sum = 0;            // 히든 넘버의 합
+        long sum = 0;            // 히든 넘버의 합
         StringBuilder intStr = new StringBuilder();     // 히든 넘버
 
         for (int i = 0; i < n; i++) {
@@ -21,12 +21,17 @@ public class Number8595 {
             }
             else {
                 // 히든넘버가 존재하면 sum에 누적합
-                if (!intStr.toString().equals("")) {
-                    sum += Integer.parseInt(intStr.toString());
+                if (intStr.length() > 0) {
+                    sum += Long.parseLong(String.valueOf(intStr));
                 }
                 // 두 히든 넘버 사이에는 글자가 존재하므로 숫자가 아닐때는 히든넘버를 초기화
                 intStr = new StringBuilder();
             }
+        }
+        // 단어 길이 1일 경우
+        if (intStr.length() > 0) {
+            sum += Long.parseLong(String.valueOf(intStr));
+            intStr = new StringBuilder();
         }
 
         System.out.println(sum);
