@@ -3,6 +3,7 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashSet;
 
 public class Number10448 {
     public static void main(String[] args) throws IOException {
@@ -17,25 +18,27 @@ public class Number10448 {
             T[i] = i * (i + 1) / 2;
         }
 
-        for (int i = 0; i < N; i++) {
-            int num = Integer.parseInt(br.readLine());  // 자연수
-            int result = checkEureka(T, num);   // 결과값
-            System.out.println(result);
-        }
-    }
+        HashSet<Integer> eureka = new HashSet<>();  // 유레카 이론에 맞는 수의 집합
 
-    // 유레카 이론에 적합한 수인지 판단하는 메서드
-    static int checkEureka(int[] T, int num) {
+        // HashSet 초기화
         for (int i = 1; i < 45; i++) {
             for (int j = 1; j < 45; j++) {
                 for (int k = 1; k < 45; k++) {
-                    if (num == T[i] + T[j] + T[k]) {
-                        return 1;
-                    }
+                    eureka.add(T[i] + T[j] + T[k]);
                 }
             }
         }
 
-        return 0;
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < N; i++) {
+            int num = Integer.parseInt(br.readLine());  // 자연수
+            if (eureka.contains(num)) {
+                sb.append(1).append('\n');
+            } else {
+                sb.append(0).append('\n');
+            }
+        }
+
+        System.out.println(sb);
     }
 }
