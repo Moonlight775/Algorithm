@@ -9,18 +9,14 @@ public class Number2789 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String str = br.readLine();
+        char[] remove = "CAMBRIDGE".toCharArray();
 
-        String result = str
-                .replace("C", "")
-                .replace("A", "")
-                .replace("M", "")
-                .replace("B", "")
-                .replace("R", "")
-                .replace("I", "")
-                .replace("D", "")
-                .replace("G", "")
-                .replace("E", "");
+        for (char c : remove) {
+            if (str.indexOf(c) != -1) {
+                str = str.replace(String.valueOf(c), "");
+            }
+        }
 
-        System.out.println(result);
+        System.out.println(str);
     }
 }
