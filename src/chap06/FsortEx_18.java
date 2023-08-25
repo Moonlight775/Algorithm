@@ -8,12 +8,9 @@ public class FsortEx_18 {
         int[] f = new int[max + 1];     // 누적 도수
         int[] b = new int[n];   // 작업용 목적 배열
 
-        System.out.println("1단계 : 도수분포표 만들기");  // 1단계
+        // 1단계
+        System.out.println("1단계 : 도수분포표 만들기");
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j <= max; j++) {
-                System.out.printf("%3d", f[j]);
-            }
-            System.out.println();
             f[a[i]]++;
         }
         for (int k = 0; k <= max; k++) {
@@ -21,12 +18,9 @@ public class FsortEx_18 {
         }
         System.out.println();
 
-        System.out.println("2단계 : 누적도수분포표 만들기");    // 2단계
+        // 2단계
+        System.out.println("2단계 : 누적도수분포표 만들기");
         for (int i = 1; i <= max; i++) {
-            for (int j = 0; j <= max; j++) {
-                System.out.printf("%3d", f[j]);
-            }
-            System.out.println();
             f[i] += f[i - 1];
         }
         for (int k = 0; k <= max; k++) {
@@ -34,21 +28,23 @@ public class FsortEx_18 {
         }
         System.out.println();
 
-        System.out.println("3단계 : 정렬");     // 3단계
+        // 3단계
+        System.out.println("3단계 : 정렬");
         for (int i = n - 1; i >= 0; i--) {
             for (int j = 0; j < n; j++) {
-                System.out.printf("%3d", b[j]);
+                System.out.printf("%4d", b[j]);
             }
             System.out.println();
             b[--f[a[i]]] = a[i];
         }
         for (int k = 0; k < n; k++) {
-            System.out.printf("%3d", b[k]);
+            System.out.printf("%4d", b[k]);
         }
         System.out.println();
 
+        // 4단계
         for (int i = 0; i < n; i++) {
-            a[i] = b[i];    // 4단계
+            a[i] = b[i];
         }
     }
 
