@@ -69,7 +69,7 @@ public class IntSet {
     public void copyTo(IntSet s) {
         int n = (s.max < num) ? s.max : num;    // 복사할 요소 개수
         for (int i = 0; i < n; i++) {
-            s.set[i] = set[i];
+            s.add(set[i]);
         }
         num = n;
     }
