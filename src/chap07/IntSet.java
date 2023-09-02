@@ -118,4 +118,19 @@ public class IntSet {
         temp.append("}");
         return temp.toString();
     }
+
+    // 집합이 비어 있는가?
+    public boolean isEmpty() {
+        return num == 0;
+    }
+
+    // 집합이 가득 찼는가?
+    public boolean isFull() {
+        return num >= max;
+    }
+
+    // 집합을 비움(모든 요소를 삭제)
+    public void clear() {
+        num = 0;
+    }
 }
