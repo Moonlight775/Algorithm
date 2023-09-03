@@ -133,4 +133,39 @@ public class IntSet {
     public void clear() {
         num = 0;
     }
+
+    // 집합 s와 합집합
+    public boolean add(IntSet s) {
+        boolean flag = false;
+        for (int i = 0; i < num; i++) {
+            if (add(set[i]) == true) {
+                flag = true;
+            }
+        }
+        return flag;
+    }
+
+    // 집합 s와 교집합
+    public boolean retain(IntSet s) {
+        boolean flag = false;
+        for (int i = 0; i < num; i++) {
+            if (s.contains(set[i]) == false) {
+                remove(set[i]);
+                flag = true;
+            }
+        }
+        return flag;
+    }
+
+    // 집합 s와 차집합
+    public boolean remove(IntSet s) {
+        boolean flag = false;
+        for (int i = 0; i < num; i++) {
+            if (s.contains(set[i]) == true) {
+                remove(set[i]);
+                flag = true;
+            }
+        }
+        return flag;
+    }
 }
