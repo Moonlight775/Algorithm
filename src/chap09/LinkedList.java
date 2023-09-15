@@ -68,17 +68,17 @@ public class LinkedList<E> {
         if (head != null) {
             if (head.next == null) {    // 노드가 하나만 있으면
                 removeFirst();          // 머리 노드를 삭제
-            }
-        } else {
-            Node<E> ptr = head;     // 스캔 중인 노드
-            Node<E> pre = head;     // 스캔 중인 노드의 앞쪽 노드
+            } else {
+                Node<E> ptr = head;     // 스캔 중인 노드
+                Node<E> pre = head;     // 스캔 중인 노드의 앞쪽 노드
 
-            while (ptr.next != null) {
-                pre = ptr;
-                ptr = ptr.next;
+                while (ptr.next != null) {
+                    pre = ptr;
+                    ptr = ptr.next;
+                }
+                pre.next = null;    // pre는 삭제 후의 꼬리 노드
+                crnt = pre;
             }
-            pre.next = null;    // pre는 삭제 후의 꼬리 노드
-            crnt = pre;
         }
     }
 
@@ -87,16 +87,16 @@ public class LinkedList<E> {
         if (head != null) {
             if (p == head) {    // p가 머리 노드면
                 removeFirst();  // 머리 노드를 삭제
-            }
-        } else {
-            Node<E> ptr = head;
+            } else {
+                Node<E> ptr = head;
 
-            while (ptr.next != p) {
-                ptr = ptr.next;
-                if (ptr == null) return;    // p가 리스트에 없습니다.
+                while (ptr.next != p) {
+                    ptr = ptr.next;
+                    if (ptr == null) return;    // p가 리스트에 없습니다.
+                }
+                ptr.next = p.next;
+                crnt = ptr;
             }
-            ptr.next = p.next;
-            crnt = ptr;
         }
     }
 
