@@ -171,4 +171,18 @@ public class LinkedList<E> {
 
         crnt = head;
     }
+
+    // 머리부터 n개 뒤 노드의 데이터에 대한 참조를 반환
+    public E retrieve(int n) {
+        Node<E> ptr = head;
+
+        while (n >= 0 && ptr != null) {
+            if (n-- == 0) {
+                crnt = ptr;
+                return ptr.data;    // 검색 성공
+            }
+            ptr = ptr.next;     // 뒤쪽노드에 주목
+        }
+        return (null);
+    }
 }
