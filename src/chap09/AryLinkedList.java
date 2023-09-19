@@ -1,5 +1,7 @@
 package chap09;
 
+import java.util.Comparator;
+
 public class AryLinkedList<E> {
     // 노드
     class Node<E> {
@@ -60,6 +62,49 @@ public class AryLinkedList<E> {
             int rec = deleted;      // idx를 free 리스트의
             deleted = idx;          // 머리에 삽입
             n[idx].dnext = rec;
+        }
+    }
+
+    // 노드를 검색
+    public E search(E obj, Comparator<? super E> c) {
+        int ptr = head;         // 현재 스캔 중인 노드
+
+        while (ptr != NULL) {
+            if (c.compare(obj, n[ptr].data) == 0) {
+                crnt = ptr;
+                return n[ptr].data;     // 검색 성공
+            }
+            ptr = n[ptr].next;          // 다음 노드에 주목
+        }
+        return null;    // 검색 실패
+    }
+
+    // 머리에 노드를 삽입
+    public void addFirst(E obj) {
+        int ptr = head;     // 삽입 전의 머리 노드
+        int rec = getInsertIndex();
+
+        if (rec != NULL) {
+            head = crnt = rec;  // 인덱스 rec인 record에 삽입
+            n[head].set(obj, ptr);
+        }
+    }
+
+    // 꼬리에 노드를 삽입
+    public void addLast(E obj) {
+        if (head == NULL) {     // 리스트가 비어 있으면
+            addFirst(obj);      // 머리에 삽입
+        } else {
+            int ptr = head;
+            while (n[ptr].next != NULL) {
+                ptr = n[ptr].next;
+            }
+
+            int rec = getInsertIndex();
+            if (rec != NULL) {      // 인덱스 rec인 record에 삽입
+                n[ptr].next = crnt = rec;
+                n[rec].set(obj, NULL);
+            }
         }
     }
 
