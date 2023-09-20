@@ -108,4 +108,67 @@ public class AryLinkedList<E> {
         }
     }
 
+    // 머리 노드를 삭제
+    public void removeFirst() {
+        if (head != NULL) {     // 리스트가 비어 있지 않으면
+            int ptr = n[head].next;
+            deleteIndex(head);
+            head = crnt = ptr;
+        }
+    }
+
+    // 꼬리 노드를 삭제
+    public void removeLast() {
+        if (head != NULL) {
+            if (n[head].next == NULL) {     // 노드가 하나만 있으면
+                removeFirst();              // 머리 노드를 삭제
+            } else {
+                int ptr = head;             // 스캔 중인 노드
+                int pre = head;             // 스캔 중인 노드의 앞쪽 노드
+
+                while (n[ptr].next != NULL) {
+                    pre = ptr;
+                    ptr = n[ptr].next;
+                }
+
+                n[pre].next = NULL;         // pre는 삭제 후의 꼬리 노드
+                deleteIndex(ptr);
+                crnt = pre;
+            }
+        }
+    }
+
+    // record p를 삭제
+    public void remove(int p) {
+        if (head != NULL) {
+            if (p == head) {        // p가 머리 노드면
+                removeFirst();      // 머리 노드를 삭제
+            } else {
+                int ptr = head;
+
+                while (n[ptr].next != p) {
+                    ptr = n[ptr].next;
+                    if (ptr == NULL) return;    // p가 리스트에 없습니다.
+                }
+                n[ptr].next = NULL;
+                deleteIndex(p);
+                n[ptr].next = n[p].next;
+                crnt = ptr;
+            }
+        }
+    }
+
+    // 선택 노드를 삭제
+    public void removeCurrentNode() {
+        remove(crnt);
+    }
+
+    // 모든 노드를 삭제
+    public void clear() {
+        while (head != NULL) {  // 텅 빌 때까지
+            removeFirst();      // 머리 노드를 삭제
+        }
+        crnt = NULL;
+    }
+
 }
