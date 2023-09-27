@@ -1,5 +1,7 @@
 package chap09;
 
+import java.util.Comparator;
+
 public class DblLinkedList<E> {
     // 노드
     class Node<E> {
@@ -32,5 +34,19 @@ public class DblLinkedList<E> {
     // 리스트가 비어 있는가?
     public boolean isEmpty() {
         return head.next == head;
+    }
+
+    // 노드를 검색
+    public E search(E obj, Comparator<? super E> c) {
+        Node<E> ptr = head.next;    // 현재 스캔 중인 노드
+
+        while (ptr != head) {
+            if (c.compare(obj, ptr.data) == 0) {
+                crnt = ptr;
+                return ptr.data;    // 검색 성공
+            }
+            ptr = ptr.next;         // 다음 노드로 선택
+        }
+        return null;                // 검색 실패
     }
 }
