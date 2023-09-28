@@ -49,4 +49,33 @@ public class DblLinkedList<E> {
         }
         return null;                // 검색 실패
     }
+
+    // 선택 노드를 출력
+    public void printCurrentNode() {
+        if (isEmpty()) {
+            System.out.println("선택 노드가 없습니다.");
+        } else {
+            System.out.println(crnt.data);
+        }
+    }
+
+    // 모든 노드를 출력
+    public void dump() {
+        Node<E> ptr = head.next;    // 더미 노드의 다음 노드
+
+        while (ptr != head) {
+            System.out.println(ptr.data);
+            ptr = ptr.next;
+        }
+    }
+
+    // 모든 노드를 거꾸로 출력
+    public void dumpReverse() {
+        Node<E> ptr = head.prev;    // 더미 노드의 앞쪽 노드
+
+        while (ptr != head) {
+            System.out.println(ptr.data);
+            ptr = ptr.prev;
+        }
+    }
 }
