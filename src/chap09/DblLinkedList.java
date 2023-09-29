@@ -78,4 +78,22 @@ public class DblLinkedList<E> {
             ptr = ptr.prev;
         }
     }
+
+    // 선택 노드를 하나 뒤쪽으로 이동
+    public boolean next() {
+        if (isEmpty() || crnt.next == head) {
+            return false;       // 이동할 수 없음
+        }
+        crnt = crnt.next;
+        return true;
+    }
+
+    // 선택 노드를 하나 앞쪽으로 이동
+    public boolean prev() {
+        if (isEmpty() || crnt.prev == head) {
+            return false;       // 이동할 수 없음
+        }
+        crnt = crnt.prev;
+        return true;
+    }
 }
