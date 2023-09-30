@@ -96,4 +96,23 @@ public class DblLinkedList<E> {
         crnt = crnt.prev;
         return true;
     }
+
+    // 선택 노드의 바로 뒤에 노드를 삽입
+    public void add(E obj) {
+        Node<E> node = new Node<E>(obj, crnt, crnt.next);
+        crnt.next = crnt.next.prev = node;
+        crnt = node;
+    }
+
+    // 머리에 노드를 삽입
+    public void addFirst(E obj) {
+        crnt = head;    // 더미 노드 head의 바로 뒤에 삽입
+        add(obj);
+    }
+
+    // 꼬리에 노드를 삽입
+    public void addLast(E obj) {
+        crnt = head.prev;   // 꼬리 노드 head.prev의 바로 뒤에 삽입
+        add(obj);
+    }
 }
