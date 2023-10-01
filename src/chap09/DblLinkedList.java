@@ -115,4 +115,47 @@ public class DblLinkedList<E> {
         crnt = head.prev;   // 꼬리 노드 head.prev의 바로 뒤에 삽입
         add(obj);
     }
+
+    // 선택 노드를 삭제
+    public void removeCurrentNode() {
+        if (!isEmpty()) {
+            crnt.prev.next = crnt.next;
+            crnt.next.prev = crnt.prev;
+            crnt = crnt.prev;
+            if (crnt == head) crnt = head.next;
+        }
+    }
+
+    // 노드 p를 삭제
+    public void remove(Node p) {
+        Node<E> ptr = head.next;
+
+        while (ptr != head) {
+            if (ptr == p) {     // p를 찾음
+                crnt = p;
+                removeCurrentNode();
+                break;
+            }
+            ptr = ptr.next;
+        }
+    }
+
+    // 머리 노드를 삭제
+    public void removeFirst() {
+        crnt = head.next;   // 머리 노드 head.next를 삭제
+        removeCurrentNode();
+    }
+
+    // 꼬리 노드를 삭제
+    public void removeLast() {
+        crnt = head.prev;   // 꼬리 노드 head.prev를 삭제
+        removeCurrentNode();
+    }
+
+    // 모든 노드를 삭제
+    public void clear() {
+        while (!isEmpty()) {    // 텅 빌 때까지
+            removeFirst();      // 머리 노드를 삭제
+        }
+    }
 }
