@@ -185,4 +185,18 @@ public class BinTree<K, V> {
     public void print() {
         printSubTree(root);
     }
+
+    // node를 뿌리로 하는 서브트리의 노드를 키 값의 내림차순으로 출력
+    private void printSubTreeR(Node node) {
+        if (node != null) {
+            printSubTreeR(node.right);  // 오른쪽 서브트리를 키값의 오름차순으로 나타냄
+            System.out.println(node.key + " " + node.data);     //node를 나타냄
+            printSubTreeR(node.left);   // 왼쪽 서브트리를 키값의 오름차순으로 나타냄
+        }
+    }
+
+    // 모든 노드를 키 값의 내림차순으로 출력
+    public void printReverse() {
+        printSubTreeR(root);
+    }
 }
