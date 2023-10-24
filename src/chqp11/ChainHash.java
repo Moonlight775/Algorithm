@@ -30,4 +30,17 @@ public class ChainHash<K,V> {
             return key.hashCode();
         }
     }
+
+    private int size;               // 해시 테이블의 크기
+    private Node<K,V>[] table;      // 해시 테이블
+
+    // 생성자
+    public ChainHash(int capacity) {
+        try {
+            table = new Node[capacity];
+            this.size = capacity;
+        } catch (OutOfMemoryError e) {      // 테이블을 생성할 수 없음
+            this.size = 0;
+        }
+    }
 }
