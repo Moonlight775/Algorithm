@@ -78,4 +78,25 @@ public class ChainHash<K,V> {
         table[hash] = temp;     // 노드를 삽입
         return 0;
     }
+
+    // 키 값 key를 갖는 요소의 삭제
+    public int remove(K key) {
+        int hash = hashValue(key);      // 삭제할 데이터의 해시 값
+        Node<K, V> p = table[hash];     // 선택 노드
+        Node<K, V> pp = null;           // 바로 앞의 선택 노드
+
+        while (p != null) {
+            if (p.getKey().equals(key)) {   // 찾으면
+                if (pp == null) {
+                    table[hash] = p.next;
+                } else {
+                    pp.next = p.next;
+                }
+                return 0;
+            }
+            pp = p;
+            p = p.next;     // 다음 노드를 가리킨다.
+        }
+        return 1;           // 그 키 값은 없습니다.
+    }
 }
