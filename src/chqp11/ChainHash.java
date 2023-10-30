@@ -99,4 +99,18 @@ public class ChainHash<K,V> {
         }
         return 1;           // 그 키 값은 없습니다.
     }
+
+    // 해시 테이블을 덤프
+    public void dump() {
+        for (int i = 0; i < size; i++) {
+            Node<K,V> p = table[i];
+            System.out.printf("%02d ", i);
+
+            while (p != null) {
+                System.out.printf("-> %s (%s) ", p.getKey(), p.getValue());
+                p = p.next;
+            }
+            System.out.println();
+        }
+    }
 }
