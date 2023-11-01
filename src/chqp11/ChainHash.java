@@ -50,7 +50,7 @@ public class ChainHash<K,V> {
     }
 
     // 키 값 key를 갖는 요소의 검색 (데이터를 반환)
-    public V searc(K key) {
+    public V search(K key) {
         int hash = hashValue(key);      // 검색할 데이터의 해시 값
         Node<K,V> p = table[hash];      // 선택 노드
 
