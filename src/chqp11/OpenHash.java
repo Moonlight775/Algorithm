@@ -96,4 +96,23 @@ public class OpenHash<K,V> {
         }
     }
 
+    // 키 값 key, 데이터 data를 갖는 요소의 추가
+    public int add(K key, V data) {
+        if (search(key) != null) {
+            return 1;   // 이 키 값은 이미 등록됨
+        }
+
+        int hash = hashValue(key);      // 추가할 데이터의 해시 값
+        Bucket<K, V> p = table[hash];   // 선택 버킷
+        for (int i = 0; i < size; i++) {
+            if (p.stat == Status.EMPTY || p.stat == Status.DELETED) {
+                p.set(key, data, Status.OCCUPIED);
+                return 0;
+            }
+            hash = rehashValue(hash);   // 재해시
+            p = table[hash];
+        }
+        return 2;   // 해시 테이블이 가득 참
+    }
+
 }
