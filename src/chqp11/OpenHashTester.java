@@ -82,4 +82,48 @@ public class OpenHashTester {
         return Menu.MenuAt(key);
     }
 
+    public static void main(String[] args) {
+        Menu menu;      // 메뉴
+        Data data;      // 추가용 데이터 참조
+        Data temp = new Data();     // 입력용 데이터
+
+        OpenHash<Integer, Data> hash = new OpenHash<>(13);
+
+        do {
+            switch (menu = SelectMenu()) {
+                case ADD:       // 추가
+                    data = new Data();
+                    data.scanData("추가", Data.NO | Data.NAME);
+                    int k = hash.add(data.keyCode(), data);
+                    switch (k) {
+                        case 1:
+                            System.out.println("그 키 값은 이미 등록되어 있습니다.");
+                            break;
+                        case 2:
+                            System.out.println("해시 테이블이 가득 찼습니다.");
+                            break;
+                    }
+                    break;
+
+                case REMOVE:    // 삭제
+                    temp.scanData("삭제", Data.NO);
+                    hash.remove(temp.keyCode());
+                    break;
+
+                case SEARCH:    // 검색
+                    temp.scanData("검색", Data.NO);
+                    Data t = hash.search(temp.keyCode());
+                    if (t != null) {
+                        System.out.println("그 키를 갖는 데이터는 " + t + "입니다.");
+                    } else {
+                        System.out.println("그 데이터가 없습니다.");
+                    }
+                    break;
+
+                case DUMP:      // 출력
+                    hash.dump();
+                    break;
+            }
+        } while (menu != Menu.TERMINATE);
+    }
 }
