@@ -129,7 +129,7 @@ public class OpenHash<K,V> {
     // 해시 테이블을 덤프
     public void dump() {
         for (int i = 0; i < size; i++) {
-            System.out.printf("02d ", i);
+            System.out.printf("%02d ", i);
             switch (table[i].stat) {
                 case OCCUPIED:
                     System.out.printf("%s (%s)\n", table[i].getKey(), table[i].getValue());
