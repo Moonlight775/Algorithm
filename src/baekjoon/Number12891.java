@@ -6,6 +6,11 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Number12891 {
+
+    static int[] checkArr;
+    static int[] myArr;
+    static int checkSecret;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -14,43 +19,81 @@ public class Number12891 {
         int P = Integer.parseInt(st.nextToken());   // 비밀번호로 사용할 부분문자열의 길이
         int result = 0;                             // 만들 수 있는 비밀번호의 종류의 수
         char[] str = br.readLine().toCharArray();   // DNA 문자열 배열
-        int[] checkArr = new int[4];                // 비밀번호 체크 배열 (부분문자열에 포함되어야 할 'A', 'C', 'G', 'T'의 개수)
+        checkArr = new int[4];                      // 비밀번호 체크 배열 (부분문자열에 포함되어야 할 'A', 'C', 'G', 'T'의 개수)
+        myArr = new int[4];                         // 현재 상태 배열
+        checkSecret = 0;
 
-        // 비밀번호 체크 배열 초기화
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < 4; i++) {
             checkArr[i] = Integer.parseInt(st.nextToken());
+
+            if (checkArr[i] == 0) checkSecret++;
         }
 
-        for (int i = 0; i <= str.length - P; i++) {     // P에 따른 확인해야할 범위는 (DNA 문자열 길이 - P의 길이)
-            int[] currentArr = new int[4];  // 현재 부분문자열 상태 배열
-            boolean flag = true;            // 부분문자열이 조건에 만족하지 못 하면 false
+        for (int i = 0; i < P; i++) {   // 초기 P 부분 문자열 처리 부분
+            Add(str[i]);
+        }
+        if (checkSecret == 4) result++;
 
-            // 확인중인 부분문자열 배열 초기화
-            for (int j = i; j < i + P; j++) {
-                if (str[j] == 'A') {
-                    currentArr[0]++;
-                } else if (str[j] == 'C') {
-                    currentArr[1]++;
-                } else if (str[j] == 'G') {
-                    currentArr[2]++;
-                } else if (str[j] == 'T') {
-                    currentArr[3]++;
-                }
-            }
+        // 슬라이딩 윈도우 처리 부분
+        for (int i = P; i < S; i++) {
+            int j = i - P;
 
-            for (int k = 0; k < 4; k++) {
-                if (checkArr[k] > currentArr[k]) {  // 조건에 충족하지 못 한다면
-                    flag = false;
-                    break;
-                }
-            }
+            Add(str[i]);
+            Remove(str[j]);
 
-            if (flag) {     // 조건이 만족 됐다면 result +1
-                result++;
-            }
+            if (checkSecret == 4) result++;  // 4자릿수와 관련된 크기가 모두 충족될 때 유효한 비밀번호
         }
 
         System.out.println(result);
+        br.close();
+    }
+
+    private static void Add(char c) {   // 새로 들어온 문자를 처리하는 함수
+        switch (c) {
+            case 'A':
+                myArr[0]++;
+                if (myArr[0] == checkArr[0]) checkSecret++;
+                break;
+
+            case 'C':
+                myArr[1]++;
+                if (myArr[1] == checkArr[1]) checkSecret++;
+                break;
+
+            case 'G':
+                myArr[2]++;
+                if (myArr[2] == checkArr[2]) checkSecret++;
+                break;
+
+            case 'T':
+                myArr[3]++;
+                if (myArr[3] == checkArr[3]) checkSecret++;
+                break;
+        }
+    }
+
+    private static void Remove(char c) {    // 제거되는 문자를 처리하는 함수
+        switch (c) {
+            case 'A':
+                if (myArr[0] == checkArr[0]) checkSecret--;
+                myArr[0]--;
+                break;
+
+            case 'C':
+                if (myArr[1] == checkArr[1]) checkSecret--;
+                myArr[1]--;
+                break;
+
+            case 'G':
+                if (myArr[2] == checkArr[2]) checkSecret--;
+                myArr[2]--;
+                break;
+
+            case 'T':
+                if (myArr[3] == checkArr[3]) checkSecret--;
+                myArr[3]--;
+                break;
+        }
     }
 }
