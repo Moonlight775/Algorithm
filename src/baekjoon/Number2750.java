@@ -10,6 +10,28 @@ public class Number2750 {
 
         int N = Integer.parseInt(br.readLine());
 
+        int[] arr = new int[N];
+
+        for (int i = 0; i < N; i++) {
+            arr[i] = Integer.parseInt(br.readLine());
+        }
+
+        // 버블정렬
+        for (int i = 0; i < N - 1; i++) {
+            for (int j = 0; j < N - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+
+        for (int i = 0; i < N; i++) {
+            System.out.println(arr[i]);
+        }
+
+        /*
         boolean[] arr = new boolean[2001];  // 절대값이 1000보다 작거나 같은 정수이므로 범위 : -1000 ~ 1000
 
         StringBuilder sb = new StringBuilder();
@@ -25,5 +47,6 @@ public class Number2750 {
         }
 
         System.out.println(sb);
+        */
     }
 }
