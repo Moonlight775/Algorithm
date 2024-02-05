@@ -48,4 +48,18 @@ public class Heap<E> {
         return index * 2 + 1;
     }
 
+    // @param newCapacity 새로운 용적 크기
+    private void resize(int newCapacity) {
+        // 새로 만들 배열
+        Object[] newArray = new Object[newCapacity];
+
+        // 새 배열에 기존에 있던 배열의 요소들을 모두 복사해준다.
+        for (int i = 1; i <= size; i++) {
+            newArray[i] = array[i];
+        }
+
+        // 현재 배열은 GC 처리를 위해 null로 처리한 뒤, 새 배열을 연결해준다.
+        this.array = null;
+        this.array = newArray;
+    }
 }
