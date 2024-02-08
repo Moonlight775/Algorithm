@@ -252,4 +252,16 @@ public class Heap<E> {
             resize(Math.max(DEFAULT_CAPACITY, array.length / 2));
         }
     }
+
+    public int size() {
+        return this.size;
+    }
+
+    @SuppressWarnings("unchecked")
+    public E peek() {
+        if (array[1] == null) {
+            throw new NoSuchElementException();
+        }
+        return (E) array[1];
+    }
 }
