@@ -1,5 +1,6 @@
 package heap;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.NoSuchElementException;
 
@@ -263,5 +264,13 @@ public class Heap<E> {
             throw new NoSuchElementException();
         }
         return (E) array[1];
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public Object[] toArray() {
+        return Arrays.copyOf(array, size + 1);
     }
 }
