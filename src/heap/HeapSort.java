@@ -58,41 +58,51 @@ public class HeapSort {
     private static void heapify(int[] a, int parentIdx, int lastIdx) {
         // 현재 트리에서 부모 노드의 자식노드 인덱스를 각각 구해준다.
         // 현재 부모 인덱스를 가장 큰 값을 갖고 있다고 가정한다.
-        int leftChildIdx  = 2 * parentIdx + 1;
-        int rightChildIdx = 2 * parentIdx + 2;
-        int largestIdx = parentIdx;
+        int leftChildIdx;
+        int rightChildIdx;
+        int largestIdx;
 
         /*
-         * left child node와 비교
+         * 현재 부모 인덱스의 자식 노드 인덱스가
+         * 마지막 인덱스를 넘지 않을 때 까지 반복한다.
          *
-         * 자식 노드 인덱스가 끝의 원소 인덱스를 넘어가지 않으면서
-         * 현재 가장 큰 인덱스보다 왼쪽 자식 노드의 값이 더 클 경우
-         * 가장 큰 인덱스를 가리키는 largestIdx를 왼쪽 자식 노드 인덱스로 바꿔준다.
+         * 이때 왼쪽 자식 노드를 기준으로 해야 한다.
+         * 오른쪽 자식 노드를 기준으로 범위를 검사하게 되면
+         * 마지막 부모 인덱스가 왼쪽 자식만 갖고 있을 경우
+         * 왼쪽 자식노드와는 비교 및 교환을 할 수 없기 때문이다.
          */
-        if (leftChildIdx <= lastIdx && a[largestIdx] < a[leftChildIdx]) {
-            largestIdx = leftChildIdx;
-        }
+        while ((parentIdx * 2) + 1 <= lastIdx) {
+            leftChildIdx = (parentIdx * 2) + 1;
+            rightChildIdx = (parentIdx * 2) + 2;
+            largestIdx = parentIdx;
 
-        /*
-         * left right node와 비교
-         *
-         * 자식 노드 인덱스가 끝의 원소 인덱스를 넘어가지 않으면서
-         * 현재 가장 큰 인덱스보다 오른쪽 자식 노드의 값이 더 클 경우
-         * 가장 큰 인덱스를 가리키는 largestIdx를 오른쪽 자식 노드 인덱스로 바꿔준다.
-         */
-        if (rightChildIdx <= lastIdx && a[largestIdx] < a[rightChildIdx]) {
-            largestIdx = rightChildIdx;
-        }
+            /*
+             * left child node와 비교
+             * (범위는 while문에서 검사했으므로 별도 검사 필요 없음)
+             */
+            if (a[leftChildIdx] > a[largestIdx]) {
+                largestIdx = leftChildIdx;
+            }
 
-        /*
-         * largestIdx 와 부모 노드가 같지 않다는 것은
-         * 위 자식 노드 비교 과정에서 현재 부모 노드보다 큰 노드가 존재한다는 뜻이다.
-         * 그럴 경우 해당 자식 노드와 부모 노드를 교환해주고,
-         * 교환된 자식노드를 부모노드로 삼은 서브트리를 검사하도록 재귀호출 한다.
-         */
-        if (parentIdx != largestIdx) {
-            swap(a, largestIdx, parentIdx);
-            heapify(a, largestIdx, lastIdx);
+            /*
+             * right child node와 비교
+             * right child node는 범위를 검사해주어야 한다.
+             */
+            if (rightChildIdx <= lastIdx && a[rightChildIdx] > a[largestIdx]) {
+                largestIdx = rightChildIdx;
+            }
+
+            /*
+             * 교환이 발생했을 경우 두 원소를 교체 한 후
+             * 교환이 된 자식노드를 부모노드가 되도록 교체한다.
+             */
+            if (largestIdx != parentIdx) {
+                swap(a, parentIdx, largestIdx);
+                parentIdx = largestIdx;
+            }
+            else {
+                return;
+            }
         }
     }
 }
