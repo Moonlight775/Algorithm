@@ -1,65 +1,24 @@
 package baekjoon;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Number9625 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int K = sc.nextInt();
+        int k = sc.nextInt();
 
-        Num num = new Num(0, 1);
+        int[][] dp = new int[2][46];
 
-        ArrayList list = new ArrayList();
+        dp[1][1] = 1;
 
-        list.add(num);
-
-        for (int i = 1; i < K; i++) {
-            Num n1 = (Num) list.get(i - 1);
-            int a = n1.getA();
-            int b = n1.getB();
-
-            num = new Num(b, a + b);
-            list.add(num);
+        // A의 수는 앞선 B의 수와 같다.
+        // B의 수는 앞선 A와 B의 합과 같다.
+        for (int i = 2; i <= k; i++) {
+            dp[0][i] = dp[1][i - 1];
+            dp[1][i] = dp[0][i - 1] + dp[1][i - 1];
         }
 
-        Num result = (Num) list.get(K - 1);
-
-        System.out.print(result.getA() + " " + result.getB());
-    }
-}
-
-class Num {
-    private int A;
-    private int B;
-
-    public int getA() {
-        return A;
-    }
-
-    public void setA(int a) {
-        A = a;
-    }
-
-    public int getB() {
-        return B;
-    }
-
-    public void setB(int b) {
-        B = b;
-    }
-
-    Num() {
-
-    }
-
-    Num(int A, int B) {
-        this.A = A;
-        this.B = B;
-    }
-
-    public String toString() {
-        return A + " " + B;
+        System.out.println(dp[0][k] + " " + dp[1][k]);
     }
 }
