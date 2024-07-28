@@ -7,54 +7,56 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Number1920 {
-
-    public static int[] arr;
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
         int N = Integer.parseInt(br.readLine());
-        arr = new int[N];
+        int[] arr = new int[N];     // N개의 정수 저장 배열
 
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-        for (int i=0; i<N; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());  // 배열 입력받은 수로 초기화
+        // N 배열 초기화
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < N; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        Arrays.sort(arr);   // 이분 탐색 전에 반드시 정렬되어 있어야 한다.
+        Arrays.sort(arr);   // N 배열 오름차순 정렬
 
         int M = Integer.parseInt(br.readLine());
 
-        st = new StringTokenizer(br.readLine(), " ");
-        for (int i=0; i<M; i++) {
-            if (binarySearch(Integer.parseInt(st.nextToken())) >= 0) {  // 찾는 값이 있을 경우
+        st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < M; i++) {
+            boolean find = false;   // N 배열에 찾는 값이 있었다면 true, 아니라면 false
+            int target = Integer.parseInt(st.nextToken());  // N 배열에 값이 있는지 찾을 값
+
+            // 이진 탐색 시작
+            int start = 0;
+            int end = arr.length - 1;
+
+            while (start <= end) {
+                int midi = (start + end) / 2;   // 중간 인덱스 middleIndex
+                int midV = arr[midi];   // 중간 인덱스 값 middleValue
+
+                if (midV > target) {    // 타겟값이 중간 인덱스 값보다 작다면
+                    end = midi - 1;     // 중간 인덱스보다 왼쪽에 값이 있다는 것으로 중간값 기준으로 왼쪽 데이터셋을 선택
+                }
+                else if (midV < target) {   // 타겟값이 중간 인덱스 값보다 크다면
+                    start = midi + 1;       // 중간 인덱스보다 오른쪽에 값이 있다는 것으로 중간값 기준으로 오른쪽 데이터셋을 선택
+                }
+                else {  // 중간값 == 타겟값이면 탐색 종료
+                    find = true;
+                    break;
+                }
+            }
+
+            if (find) {
                 sb.append(1).append('\n');
-            } else {
+            }
+            else {
                 sb.append(0).append('\n');
             }
         }
 
         System.out.println(sb);
-    }
-
-    public static int binarySearch(int key) {
-        int low = 0;                        // 탐색 범위의 왼쪽 끝 인덱스
-        int high = arr.length - 1;          // 탐색 범위의 오른쪽 끝 인덱스
-
-        while (low <= high) {               // low가 high보다 크거나 같아지기 전까지
-
-            int mid = (low + high) / 2;     // 중간 인덱스
-
-            if (key < arr[mid]) {           // key값이 중간 인덱스 값보다 작을 경우
-                high = mid - 1;             // 중간 인덱스보다 작은 쪽에 key가 있으므로 high 값을 변경해준다.
-            } else if (key > arr[mid]) {    // key값이 중간 인덱스 값보다 클 경우
-                low = mid + 1;              // 중간 인덱스보다 큰 쪽에 key가 있으므로 low 값을 변경해준다.
-            } else {                        // key값이 중간 인덱스 값과 같을 경우
-                return mid;
-            }
-        }
-
-        return -1;                          // 찾고자 하는 값이 존재하지 않을 경우
     }
 }
