@@ -8,18 +8,20 @@ public class Number18406 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        String N = br.readLine();
-        char[] front = N.substring(0, N.length() / 2).toCharArray();
-        char[] back = N.substring(N.length() / 2).toCharArray();
-        int sum_front = 0;
-        int sum_back = 0;
+        char[] str = br.readLine().toCharArray();
+        int front = 0;
+        int back = 0;
 
-        for (int i = 0; i < N.length() / 2; i++) {
-            sum_front += front[i];
-            sum_back += back[i];
+        for (int i = 0; i < str.length; i++) {
+            if (i < str.length / 2) {
+                front += str[i] - '0';
+            }
+            else {
+                back += str[i] - '0';
+            }
         }
 
-        if (sum_front == sum_back) {
+        if (front == back) {
             System.out.println("LUCKY");
         }
         else {
