@@ -3,6 +3,8 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Stack;
+import java.util.StringTokenizer;
 
 public class Number12605 {
     public static void main(String[] args) throws IOException {
@@ -12,12 +14,18 @@ public class Number12605 {
 
         StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= N; i++) {
-            String[] str = br.readLine().split(" ");    // String 배열에 공백을 기준으로 잘라 저장
+            StringTokenizer st = new StringTokenizer(br.readLine(), " ");   // 공백 기준으로 파싱
+            Stack<String> stack = new Stack<>();
+
+            while (st.hasMoreTokens()) {    // 토큰이 빌 때까지
+                stack.add(st.nextToken());  // 스택에 저장
+            }
+
             sb.append("Case #").append(i).append(": ");
 
-            // 배열의 값을 역으로 출력
-            for (int j = str.length - 1; j >= 0; j--) {
-                sb.append(str[j]).append(" ");
+            // 스택에 쌓인 순서대로 출력하면 역순으로 된다.
+            while (!stack.isEmpty()) {
+                sb.append(stack.pop()).append(" ");
             }
 
             sb.append('\n');
